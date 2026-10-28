@@ -1,5 +1,7 @@
 # FarStudio brand package
 
+<p align="center"><img src="docs/readme/hero.png" alt="FarStudio logo: a lighthouse with an amber light above the name FARSTUDIO, on black" width="100%"></p>
+
 FarStudio's logo, icons, banners and typeface, and which file to use where. FarStudio is the indie studio behind our games and apps (Steam, App Store, Google Play, YouTube). This is the studio's brand, not any game's: games keep their own identity and the studio signs them.
 
 - **[USO.md](USO.md)**: this same guide in Spanish.
@@ -21,12 +23,18 @@ png/        The same files as PNG, from 3840 px down.
   banners/          Headers and screens already composed on a background.
 fonts/      Outfit, variable font (OFL license, may be bundled with a game).
 integrations/  How to apply the brand in each project.
-tools/      The scripts that build svg/ and png/.
+tools/      The scripts that build svg/, png/ and the pictures of this README.
+docs/readme/   The pictures of this README.
 ```
 
 Every PNG has its size in its name: `farstudio-logo-horizontal-color-on-dark-1024x283.png` is 1024 × 283 px. The number in each list is the longest side.
 
 ## Color variants
+
+<table>
+<tr><td><img src="docs/readme/variant-color-on-dark.png" alt="variant-color-on-dark"></td><td><img src="docs/readme/variant-color-on-light.png" alt="variant-color-on-light"></td></tr>
+<tr><td><img src="docs/readme/variant-mono-black.png" alt="variant-mono-black"></td><td><img src="docs/readme/variant-mono-white.png" alt="variant-mono-white"></td></tr>
+</table>
 
 | Variant | When |
 |---|---|
@@ -39,12 +47,28 @@ All have a transparent background except `app-icon`, `avatar` and `banners`, whi
 
 ## Which piece
 
+<table>
+<tr><td><img src="docs/readme/piece-logo-vertical.png" alt="piece-logo-vertical"></td><td><img src="docs/readme/piece-logo-horizontal.png" alt="piece-logo-horizontal"></td></tr>
+<tr><td><img src="docs/readme/piece-symbol.png" alt="piece-symbol"></td><td><img src="docs/readme/piece-wordmark.png" alt="piece-wordmark"></td></tr>
+</table>
+
 - **Vertical**: the primary logo. Credits, splash, posters, covers, press kit.
 - **Horizontal** (lighthouse | name): when there is little height. Web and channel headers, footers, signatures, a watermark on trailers.
 - **Symbol**: anything square or very small. Icons, avatars, favicon, anything under 32 px.
 - **Wordmark**: the name alone, only when the lighthouse is already shown nearby (next to the avatar on a store page, for example).
 
 ## Which file for each place
+
+<p>
+<img src="png/app-icon/rounded/farstudio-app-icon-rounded-128x128.png" alt="App icon" width="96">&nbsp;
+<img src="png/avatar/circle/farstudio-avatar-circle-256x256.png" alt="Avatar" width="96">&nbsp;
+<img src="png/favicon/favicon-48x48.png" alt="Favicon 48" width="48">&nbsp;
+<img src="png/favicon/favicon-32x32.png" alt="Favicon 32" width="32">&nbsp;
+<img src="png/favicon/favicon-16x16.png" alt="Favicon 16" width="16">
+</p>
+<p><img src="png/banners/youtube-banner-2560x1440.png" alt="YouTube banner" width="49%"> <img src="png/banners/link-preview-1200x630.png" alt="Link preview" width="49%"></p>
+
+The app icon, the avatar and the favicons at their real sizes, and two of the banners. All of them are ready to upload as they are.
 
 | Where | File |
 |---|---|
@@ -74,12 +98,16 @@ When a place asks for a size that is not here, take the next larger one and let 
 
 ## Rules
 
+<img src="docs/readme/clear-space.png" alt="Clear space: X, the height of the capitals, around the logo">
+
 - **Clear space**: keep at least the height of the name's capitals (X) free around the logo. The SVG and PNG files already include it.
 - **Minimum sizes**: vertical 120 px wide (30 mm), horizontal 140 px (35 mm), symbol 16 px (5 mm). Below that, use the symbol alone.
 - **Never**: stretch, rotate, change the typeface, lighten or gray it, place it on a background without contrast, add shadows or effects, reorder the pieces or move them further apart.
 - **Amber is only the lighthouse's light**: the lantern and the beams. Never on the name or on the rest of the lighthouse.
 
 ## Colors
+
+<img src="docs/readme/palette.png" alt="Palette: ink, paper, lighthouse light, text gray, light gray">
 
 | Color | HEX | RGB | Use |
 |---|---|---|---|
@@ -90,6 +118,8 @@ When a place asks for a size that is not here, take the next larger one and let 
 | Light gray | `#E8E8E5` | 232 232 229 | Supporting backgrounds and dividers |
 
 ## Typeface
+
+<img src="docs/readme/typeface.png" alt="FARSTUDIO in Outfit, FAR 600 and STUDIO 300">
 
 Outfit (Google Fonts, OFL). In the name: **FAR** at weight 600 and STUDIO at weight 300, all capitals, letter spacing 0.22 em. Outfit 400 for supporting text.
 
@@ -102,4 +132,4 @@ python3 tools/build_masters.py fonts/Outfit-Variable.ttf svg     # SVG masters, 
 python3 tools/render.py svg png                                    # every PNG, favicon and banner (needs Playwright + Chromium)
 ```
 
-`favicon.ico` (16, 32 and 48) is then packed from `png/favicon/` with Pillow.
+`favicon.ico` (16, 32 and 48) is then packed from `png/favicon/` with Pillow. The pictures of this README are in `docs/readme/`, made by `python3 tools/readme_images.py`.

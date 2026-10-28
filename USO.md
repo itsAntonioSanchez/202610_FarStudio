@@ -1,6 +1,8 @@
 # FarStudio · Paquete de marca
 
-Guía rápida de qué archivo usar en cada sitio. La guía completa de marca está en la hoja de marca de FarStudio.
+<p align="center"><img src="docs/readme/hero.png" alt="Logo de FarStudio" width="100%"></p>
+
+Guía rápida de qué archivo usar en cada sitio. La misma guía en inglés está en el [README](README.md).
 
 ## Qué hay en el paquete
 
@@ -22,6 +24,11 @@ Cada PNG lleva su tamaño en el nombre: `farstudio-logo-horizontal-color-on-dark
 
 ## Variantes de color
 
+<table>
+<tr><td><img src="docs/readme/variant-color-on-dark.png" alt="variant-color-on-dark"></td><td><img src="docs/readme/variant-color-on-light.png" alt="variant-color-on-light"></td></tr>
+<tr><td><img src="docs/readme/variant-mono-black.png" alt="variant-mono-black"></td><td><img src="docs/readme/variant-mono-white.png" alt="variant-mono-white"></td></tr>
+</table>
+
 | Variante | Cuándo |
 |---|---|
 | `color-on-light` | Fondos blancos o claros. Faro y nombre en negro, luz en ámbar. |
@@ -32,6 +39,11 @@ Cada PNG lleva su tamaño en el nombre: `farstudio-logo-horizontal-color-on-dark
 Fondo transparente en todas, salvo `app-icon`, `avatar` y `banners`, que ya llevan su fondo negro.
 
 ## Qué pieza usar
+
+<table>
+<tr><td><img src="docs/readme/piece-logo-vertical.png" alt="piece-logo-vertical"></td><td><img src="docs/readme/piece-logo-horizontal.png" alt="piece-logo-horizontal"></td></tr>
+<tr><td><img src="docs/readme/piece-symbol.png" alt="piece-symbol"></td><td><img src="docs/readme/piece-wordmark.png" alt="piece-wordmark"></td></tr>
+</table>
 
 - **Vertical**: la principal. Créditos, splash, carteles, portadas, kit de prensa.
 - **Horizontal** (faro | nombre): cuando hay poco alto. Cabeceras de webs y canales, pies de página, firmas, marca de agua en tráileres.
@@ -68,12 +80,16 @@ Si un sitio pide un tamaño que no está, escoge el siguiente más grande y deja
 
 ## Reglas rápidas
 
+<img src="docs/readme/clear-space.png" alt="Área de respeto X alrededor del logo">
+
 - **Área de respeto**: deja libre alrededor al menos la altura de las mayúsculas del nombre (X). Los SVG y PNG ya la incluyen.
 - **Tamaños mínimos**: vertical 120 px de ancho (30 mm), horizontal 140 px (35 mm), símbolo 16 px (5 mm). Por debajo, solo el símbolo.
 - **No**: deformar, girar, cambiar la tipografía, aclarar o poner en gris, usar sobre fondos sin contraste, añadir sombras o efectos, cambiar el orden de las piezas ni separarlas más de lo que vienen.
 - **El ámbar es solo la luz del faro**: linterna y haces. Nunca en el nombre ni en el resto del faro.
 
 ## Colores
+
+<img src="docs/readme/palette.png" alt="Paleta">
 
 | Color | HEX | RGB | Uso |
 |---|---|---|---|
@@ -84,5 +100,7 @@ Si un sitio pide un tamaño que no está, escoge el siguiente más grande y deja
 | Gris claro | `#E8E8E5` | 232 232 229 | Fondos de apoyo y separadores |
 
 ## Tipografía
+
+<img src="docs/readme/typeface.png" alt="FARSTUDIO en Outfit">
 
 Outfit (Google Fonts, licencia OFL). En el nombre: **FAR** en peso 600 y STUDIO en peso 300, todo en mayúsculas y con un espaciado entre letras de 0,22 em. Para textos de apoyo, Outfit 400.
