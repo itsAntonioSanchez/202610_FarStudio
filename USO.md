@@ -1,0 +1,88 @@
+# FarStudio · Paquete de marca
+
+Guía rápida de qué archivo usar en cada sitio. La guía completa de marca está en la hoja de marca de FarStudio.
+
+## Qué hay en el paquete
+
+```
+svg/        Maestros vectoriales. El texto ya está convertido a trazos: no hace falta tener la fuente.
+png/        Los mismos archivos en PNG, de 3840 px hacia abajo.
+  symbol/           El faro solo.
+  logo-vertical/    Faro encima del nombre. Versión principal.
+  logo-horizontal/  Faro | nombre, con separador. Versión secundaria.
+  wordmark/         Solo el nombre.
+  app-icon/         Icono de tienda: square (cuadrado, sin transparencia) y rounded (esquinas redondeadas).
+  avatar/           Foto de perfil: square (la plataforma lo recorta) y circle (ya recortado).
+  favicon/          Iconos para webs: favicon.ico, 16, 32, 48, 192, 512 y apple-touch-icon de 180.
+  banners/          Cabeceras y pantallas ya compuestas sobre fondo.
+fonts/      Outfit (licencia OFL, se puede distribuir con el juego).
+```
+
+Cada PNG lleva su tamaño en el nombre: `farstudio-logo-horizontal-color-on-dark-1024x283.png` mide 1024 × 283 px. El número que se escoge es el lado más largo.
+
+## Variantes de color
+
+| Variante | Cuándo |
+|---|---|
+| `color-on-light` | Fondos blancos o claros. Faro y nombre en negro, luz en ámbar. |
+| `color-on-dark` | Fondos negros u oscuros. Faro y nombre en blanco, luz en ámbar. **Es la versión preferida**: la luz luce más sobre negro. |
+| `mono-black` | Todo en negro, sin ámbar. Impresión a una tinta, sellos, grabados, documentos en blanco y negro. |
+| `mono-white` | Todo en blanco, sin ámbar. Sobre fotos o fondos de color donde el ámbar no se distinguiría. |
+
+Fondo transparente en todas, salvo `app-icon`, `avatar` y `banners`, que ya llevan su fondo negro.
+
+## Qué pieza usar
+
+- **Vertical**: la principal. Créditos, splash, carteles, portadas, kit de prensa.
+- **Horizontal** (faro | nombre): cuando hay poco alto. Cabeceras de webs y canales, pies de página, firmas, marca de agua en tráileres.
+- **Símbolo**: todo lo que es cuadrado o muy pequeño. Iconos, avatares, favicon, por debajo de 32 px.
+- **Wordmark**: solo el nombre, cuando el faro ya aparece cerca (por ejemplo, junto al avatar en una ficha de tienda).
+
+## Qué archivo para cada sitio
+
+| Dónde | Archivo |
+|---|---|
+| **App Store**, icono de developer | `app-icon/square/…-1024x1024.png` (Apple no admite transparencias; redondea él) |
+| **Google Play**, icono | `app-icon/square/…-512x512.png` |
+| **Google Play**, gráfico destacado | `banners/store-feature-graphic-1024x500.png` |
+| **Steam**, avatar de desarrollador | `avatar/square/…-256x256.png` o `…-512x512.png` |
+| **Steam**, cabecera de la página de desarrollador | `logo-horizontal/color-on-dark/…-1920x531.png` sobre negro, o `banners/social-header-1500x500.png` |
+| **YouTube**, foto del canal | `avatar/square/…-800x800.png` |
+| **YouTube**, banner | `banners/youtube-banner-2560x1440.png` (el logo cae dentro de la zona segura) |
+| **Redes** (X, Instagram, TikTok, LinkedIn), foto de perfil | `avatar/square/…-400x400.png` u `…-800x800.png` |
+| **Redes**, cabecera | `banners/social-header-1500x500.png` |
+| **Gmail / Google**, foto de la cuenta | `avatar/square/…-800x800.png` |
+| **Web**, cabecera | `svg/farstudio-logo-horizontal-color-on-light.svg` (o `-on-dark` si la cabecera es oscura) |
+| **Web**, pie | `svg/farstudio-logo-horizontal-color-on-dark.svg` o `mono-white` |
+| **Web**, favicon | `favicon/favicon.ico` + `favicon-32x32.png` + `favicon-16x16.png` + `apple-touch-icon-180x180.png` |
+| **Web**, icono de app instalable | `favicon/favicon-192x192.png` y `favicon-512x512.png` |
+| **Web**, vista previa al compartir un enlace | `banners/link-preview-1200x630.png` |
+| **Juego**, splash de arranque | `banners/splash-dark-1920x1080.png` (o `-3840x2160` en 4K); en vertical, `logo-vertical/color-on-dark` centrado sobre negro |
+| **Juego**, créditos | `logo-vertical/color-on-dark/…-1024x….png` |
+| **Juego / tráiler**, firma en una esquina | `logo-horizontal/color-on-dark/…-512x….png` |
+| **Kit de prensa, presentaciones** | Vertical u horizontal en SVG; PNG de 2560 o 3840 si no aceptan vectores |
+| **Impresión** (tarjetas, pegatinas, camisetas) | Siempre SVG. Para una sola tinta, `mono-black` o `mono-white` |
+| **Firma de correo** | `symbol/color-on-light/…-64x….png` (se ve nítido en pantallas de alta densidad) |
+
+Si un sitio pide un tamaño que no está, escoge el siguiente más grande y deja que lo reduzca la plataforma, o exporta desde el SVG.
+
+## Reglas rápidas
+
+- **Área de respeto**: deja libre alrededor al menos la altura de las mayúsculas del nombre (X). Los SVG y PNG ya la incluyen.
+- **Tamaños mínimos**: vertical 120 px de ancho (30 mm), horizontal 140 px (35 mm), símbolo 16 px (5 mm). Por debajo, solo el símbolo.
+- **No**: deformar, girar, cambiar la tipografía, aclarar o poner en gris, usar sobre fondos sin contraste, añadir sombras o efectos, cambiar el orden de las piezas ni separarlas más de lo que vienen.
+- **El ámbar es solo la luz del faro**: linterna y haces. Nunca en el nombre ni en el resto del faro.
+
+## Colores
+
+| Color | HEX | RGB | Uso |
+|---|---|---|---|
+| Negro | `#111111` | 17 17 17 | Faro, nombre, fondos oscuros |
+| Blanco | `#FFFFFF` | 255 255 255 | Fondos, logo en negativo |
+| Luz de faro | `#F5A623` | 245 166 35 | Solo la linterna y los haces; los haces se apagan del 100 % al 15 % hacia fuera |
+| Gris texto | `#555555` | 85 85 85 | Textos secundarios |
+| Gris claro | `#E8E8E5` | 232 232 229 | Fondos de apoyo y separadores |
+
+## Tipografía
+
+Outfit (Google Fonts, licencia OFL). En el nombre: **FAR** en peso 600 y STUDIO en peso 300, todo en mayúsculas y con un espaciado entre letras de 0,22 em. Para textos de apoyo, Outfit 400.
