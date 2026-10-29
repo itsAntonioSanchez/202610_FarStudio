@@ -81,6 +81,8 @@ Si un sitio pide un tamaño que no está, escoge el siguiente más grande y deja
 
 ## Logo animado
 
+<p align="center"><img src="docs/readme/ignite.gif" alt="El faro de FarStudio encendiéndose: unos destellos rápidos, un momento a oscuras y la luz se enciende despacio" width="480"></p>
+
 En `svg/animated/` está el faro con la luz en movimiento, para webs, splash e intros. Es SVG + CSS puro: se reproduce dentro de una etiqueta `<img>`, sin JavaScript, y se queda quieto para quien tenga activado reducir el movimiento en su sistema.
 
 | Animación | Qué hace | Ciclo |
