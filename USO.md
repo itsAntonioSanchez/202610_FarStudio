@@ -8,6 +8,7 @@ Guía rápida de qué archivo usar en cada sitio. La misma guía en inglés est�
 
 ```
 svg/        Maestros vectoriales. El texto ya está convertido a trazos: no hace falta tener la fuente.
+  animated/         Faro con la luz animada (giro, parpadeo o encendido), SVG.
 png/        Los mismos archivos en PNG, de 3840 px hacia abajo.
   symbol/           El faro solo.
   logo-vertical/    Faro encima del nombre. Versión principal.
@@ -77,6 +78,18 @@ Fondo transparente en todas, salvo `app-icon`, `avatar` y `banners`, que ya llev
 | **Firma de correo** | `symbol/color-on-light/…-64x….png` (se ve nítido en pantallas de alta densidad) |
 
 Si un sitio pide un tamaño que no está, escoge el siguiente más grande y deja que lo reduzca la plataforma, o exporta desde el SVG.
+
+## Logo animado
+
+En `svg/animated/` está el faro con la luz en movimiento, para webs, splash e intros. Es SVG + CSS puro: se reproduce dentro de una etiqueta `<img>`, sin JavaScript, y se queda quieto para quien tenga activado reducir el movimiento en su sistema.
+
+| Animación | Qué hace | Ciclo |
+|---|---|---|
+| `rotate` (giro) | El haz da la vuelta: derecha, hacia ti (destello en la linterna), izquierda y por detrás (la luz se atenúa). | 6 s |
+| `blink` (parpadeo) | La luz queda encendida y se apaga dos veces muy rápido, como la señal de un faro. | 3,2 s |
+| `ignite` (encendido) | El faro encendiéndose: un parpadeo rápido que va cogiendo fuerza, un segundo a oscuras y luego la luz se enciende del todo, despacio, y se queda encendida. Para intros y splash. | una vez, 4 s |
+
+Cada una está en `symbol`, `logo-vertical` y `logo-horizontal`, en `color-on-dark` (preferida) y `color-on-light`; por ejemplo, `svg/animated/farstudio-symbol-color-on-dark-rotate.svg`. Solo se mueve la luz: el faro y el nombre no cambian. Para montar el encendido en un motor de juego u otra herramienta, en [`animation/ignite/`](animation/ignite/README.md) están el logo separado en capas, la línea de tiempo en JSON y los pasos. Un logo animado por pantalla como mucho; donde el logo va pequeño o junto a texto, el estático.
 
 ## Reglas rápidas
 
