@@ -99,7 +99,7 @@ The curves are CSS cubic-beziers. Evaluate them exactly (sample below), or use t
 
 ## Behavior
 
-- **Plays once** and holds the last frame. Never loop it: for a looping light use `rotate` or `blink`.
+- **Plays once** and holds the last frame. Never loop it.
 - **Skipping** (a tap on a splash screen): jump straight to the last frame, so the logo shows lit. Don't cut to black.
 - **Reduced motion**: when the platform asks for reduced motion, show the static logo with no animation. The SVGs already do this on the web.
 - **Background**: `#111111` behind `color-on-dark`, white behind `color-on-light`. The brand rules in the main README still apply: clear space, minimum sizes, amber only on the light.

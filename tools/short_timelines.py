@@ -1,6 +1,7 @@
-"""Short versions of rotate, blink and ignite: 1.5 s each, counting the still pause at the end.
+"""Timelines for the rotate and blink animations, long and short, as keyframes.
 
-They play once and end on the static logo. Keys are (time in ms, values, ease to the next key):
+Every one plays once and ends on the static logo. The short ones last 1.5 s, counting the still
+pause at the end. Keys are (time in ms, values, ease to the next key):
 "hold" keeps the value and jumps at the next key, a list is a CSS cubic-bezier, None ends the track.
 """
 
@@ -58,11 +59,23 @@ SHORT = {
                        ignite([(40, 50, .3), (130, 45, .45), (225, 55, .6), (320, 45, .8), (410, 55, 1.0)], 620, 980, 640, 1100, (820, 960, 1100))),
 }
 
+# The long versions: same pace as the original loops, played once.
+LONG = {
+    "rotate": ("The beam sweeps around once: right, towards you (flash), left, behind (dim), then both beams open.", 5500, {
+        "beam-r": [(0, beam(1), IO), (1500, beam(0), H), (4500, beam(0), OUT), (5500, beam(1), None)],
+        "beam-l": [(0, beam(0), H), (1500, beam(0), IO), (3000, beam(1), IO), (4500, beam(0), OUT), (5500, beam(1), None)],
+        "lamp": [(0, {"opacity": 1}, H), (3000, {"opacity": 1}, SYM), (4500, {"opacity": .45}, SYM), (5500, {"opacity": 1}, None)],
+        "glow": [(0, glow(0, .6), H), (750, glow(0, .6), SYM), (1500, glow(1, 1), SYM), (2250, glow(0, 1), None)],
+    }),
+    "blink": ("The light is on and gives two short flashes off, like a lighthouse signal, then stays on.", 1340,
+              blink([(600, 760), (1180, 1340)])),
+}
+
 TARGET = {"lamp": ".fs-lamp", "beam-l": ".fs-beam-l", "beam-r": ".fs-beam-r", "glow": ".fs-glow", "light": ".fs-light"}
 
 
-def _pct(t):
-    return f"{t * 100 / TOTAL:.3f}".rstrip("0").rstrip(".") + "%"
+def _pct(t, total):
+    return f"{t * 100 / total:.3f}".rstrip("0").rstrip(".") + "%"
 
 
 def _decl(vals):
@@ -75,8 +88,13 @@ def _decl(vals):
 
 
 def css(name):
+    """CSS for one animation, scoped to its svg class (fs-<name>)."""
+    if name in LONG:
+        _, total, tracks = LONG[name]
+    else:
+        total, tracks = TOTAL, SHORT[name][2]
     out = []
-    for track, keys in SHORT[name][2].items():
+    for track, keys in tracks.items():
         frames = []
         for i, (t, vals, ease) in enumerate(keys):
             d = _decl(vals)
@@ -84,9 +102,9 @@ def css(name):
                 d += ";animation-timing-function:steps(1,end)"
             elif ease:
                 d += ";animation-timing-function:cubic-bezier({},{},{},{})".format(*ease)
-            at = _pct(t) + (",100%" if i == len(keys) - 1 and t < TOTAL else "")
+            at = _pct(t, total) + (",100%" if i == len(keys) - 1 and t < total else "")
             frames.append(f"{at}{{{d}}}")
         kf = f"fs-{name}-{track}"
-        out.append(f".fs-{name} {TARGET[track]}{{animation:{kf} {TOTAL}ms linear 1 both}}")
+        out.append(f".fs-{name} {TARGET[track]}{{animation:{kf} {total}ms linear 1 both}}")
         out.append(f"@keyframes {kf}{{{''.join(frames)}}}")
     return "\n" + "\n".join(out) + "\n"
