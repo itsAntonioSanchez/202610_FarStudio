@@ -3,7 +3,7 @@
 Three animations of the lighthouse light, all pure SVG + CSS (no JavaScript):
   rotate  The beam sweeps around the lantern: right, towards you (flash), left, behind (dim).
   blink   The light stays on and gives two short flashes off, like a lighthouse signal.
-  ignite  Plays once: the lamp flickers fast, then slowly comes on fully and stays lit.
+  ignite  Plays once: the lamp flickers, stays dark for a second, then slowly comes on fully and stays lit.
 
 Usage: python3 tools/animate.py svg svg/animated
 """
@@ -46,12 +46,12 @@ CSS = {
 @keyframes fs-blink{0%,54%{opacity:1}57%,62%{opacity:.12}65%,72%{opacity:1}75%,80%{opacity:.12}83%,100%{opacity:1}}
 """,
     "ignite": """
-.fs-ignite .fs-lamp{animation:fs-ign-lamp 3s linear 1 both}
-.fs-ignite .fs-beam{animation:fs-ign-beam 3s linear 1 both}
-.fs-ignite .fs-glow{animation:fs-ign-glow 3s ease-in-out 1 both}
-@keyframes fs-ign-lamp{0%{opacity:0.12;animation-timing-function:steps(1,end)}2.67%{opacity:1;animation-timing-function:steps(1,end)}5.67%{opacity:0.12;animation-timing-function:steps(1,end)}8.67%{opacity:0.9;animation-timing-function:steps(1,end)}11.33%{opacity:0.12;animation-timing-function:steps(1,end)}15.33%{opacity:1;animation-timing-function:steps(1,end)}18.67%{opacity:0.12;animation-timing-function:steps(1,end)}21.33%{opacity:0.85;animation-timing-function:steps(1,end)}24%{opacity:0.12;animation-timing-function:steps(1,end)}28%{opacity:1;animation-timing-function:steps(1,end)}30.67%{opacity:0.12;animation-timing-function:steps(1,end)}35%{opacity:.12;animation-timing-function:cubic-bezier(.4,0,.2,1)}76.67%,100%{opacity:1}}
-@keyframes fs-ign-beam{0%{opacity:0;transform:scaleX(1);animation-timing-function:steps(1,end)}2.67%{opacity:0.5;transform:scaleX(1);animation-timing-function:steps(1,end)}5.67%{opacity:0;transform:scaleX(1);animation-timing-function:steps(1,end)}8.67%{opacity:0.4;transform:scaleX(1);animation-timing-function:steps(1,end)}11.33%{opacity:0;transform:scaleX(1);animation-timing-function:steps(1,end)}15.33%{opacity:0.5;transform:scaleX(1);animation-timing-function:steps(1,end)}18.67%{opacity:0;transform:scaleX(1);animation-timing-function:steps(1,end)}21.33%{opacity:0.4;transform:scaleX(1);animation-timing-function:steps(1,end)}24%{opacity:0;transform:scaleX(1);animation-timing-function:steps(1,end)}28%{opacity:0.5;transform:scaleX(1);animation-timing-function:steps(1,end)}30.67%{opacity:0;transform:scaleX(1);animation-timing-function:steps(1,end)}38.33%{opacity:0;transform:scaleX(.1);animation-timing-function:cubic-bezier(.35,0,.15,1)}100%{opacity:1;transform:scaleX(1)}}
-@keyframes fs-ign-glow{0%,68%{opacity:0;transform:scale(.6)}86%{opacity:.6;transform:scale(1)}100%{opacity:0;transform:scale(1)}}
+.fs-ignite .fs-lamp{animation:fs-ign-lamp 4s linear 1 both}
+.fs-ignite .fs-beam{animation:fs-ign-beam 4s linear 1 both}
+.fs-ignite .fs-glow{animation:fs-ign-glow 4s ease-in-out 1 both}
+@keyframes fs-ign-lamp{0%{opacity:0.12;animation-timing-function:steps(1,end)}2.5%{opacity:1;animation-timing-function:steps(1,end)}5%{opacity:0.12;animation-timing-function:steps(1,end)}7.75%{opacity:0.9;animation-timing-function:steps(1,end)}10%{opacity:0.12;animation-timing-function:steps(1,end)}13.5%{opacity:1;animation-timing-function:steps(1,end)}16.5%{opacity:0.12;animation-timing-function:steps(1,end)}19%{opacity:0.85;animation-timing-function:steps(1,end)}21.25%{opacity:0.12;animation-timing-function:steps(1,end)}24.75%{opacity:1;animation-timing-function:steps(1,end)}27.25%{opacity:0.12;animation-timing-function:steps(1,end)}52.25%{opacity:.12;animation-timing-function:cubic-bezier(.4,0,.2,1)}83.75%,100%{opacity:1}}
+@keyframes fs-ign-beam{0%{opacity:0;transform:scaleX(1);animation-timing-function:steps(1,end)}2.5%{opacity:0.5;transform:scaleX(1);animation-timing-function:steps(1,end)}5%{opacity:0;transform:scaleX(1);animation-timing-function:steps(1,end)}7.75%{opacity:0.4;transform:scaleX(1);animation-timing-function:steps(1,end)}10%{opacity:0;transform:scaleX(1);animation-timing-function:steps(1,end)}13.5%{opacity:0.5;transform:scaleX(1);animation-timing-function:steps(1,end)}16.5%{opacity:0;transform:scaleX(1);animation-timing-function:steps(1,end)}19%{opacity:0.4;transform:scaleX(1);animation-timing-function:steps(1,end)}21.25%{opacity:0;transform:scaleX(1);animation-timing-function:steps(1,end)}24.75%{opacity:0.5;transform:scaleX(1);animation-timing-function:steps(1,end)}27.25%{opacity:0;transform:scaleX(1);animation-timing-function:steps(1,end)}53.75%{opacity:0;transform:scaleX(.1);animation-timing-function:cubic-bezier(.35,0,.15,1)}100%{opacity:1;transform:scaleX(1)}}
+@keyframes fs-ign-glow{0%,76%{opacity:0;transform:scale(.6)}90%{opacity:.6;transform:scale(1)}100%{opacity:0;transform:scale(1)}}
 """,
 }
 
