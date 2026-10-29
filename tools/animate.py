@@ -5,11 +5,15 @@ Three animations of the lighthouse light, all pure SVG + CSS (no JavaScript):
   blink   The light stays on and gives two short flashes off, like a lighthouse signal.
   ignite  Plays once: the lamp flickers, each flash brighter than the last, stays dark for a second, then slowly comes on fully and stays lit.
 
+Plus short versions of the three (tools/short_timelines.py): 1.5 s each including the still pause at the end,
+played once, two options of each (…-rotate-short-a.svg, …-blink-short-b.svg and so on).
+
 Usage: python3 tools/animate.py svg svg/animated
 """
 import os, sys
 
 import ignite_timeline
+import short_timelines
 
 SRC = sys.argv[1]
 OUT = sys.argv[2]
@@ -48,6 +52,7 @@ CSS = {
 @keyframes fs-blink{0%,54%{opacity:1}57%,62%{opacity:.12}65%,72%{opacity:1}75%,80%{opacity:.12}83%,100%{opacity:1}}
 """,
     "ignite": ignite_timeline.css(),
+    **{name: short_timelines.css(name) for name in short_timelines.SHORT},
 }
 
 

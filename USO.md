@@ -93,6 +93,21 @@ En `svg/animated/` está el faro con la luz en movimiento, para webs, splash e i
 
 Cada una está en `symbol`, `logo-vertical` y `logo-horizontal`, en `color-on-dark` (preferida) y `color-on-light`; por ejemplo, `svg/animated/farstudio-symbol-color-on-dark-rotate.svg`. Solo se mueve la luz: el faro y el nombre no cambian. Para montar el encendido en un motor de juego u otra herramienta, en [`animation/ignite/`](animation/ignite/README.md) están el logo separado en capas, la línea de tiempo en JSON y los pasos. Un logo animado por pantalla como mucho; donde el logo va pequeño o junto a texto, el estático.
 
+### Versiones cortas (1,5 s)
+
+Las mismas tres animaciones con tiempos que caben en **1,5 s contando una pausa quieta al final**, para arranques de app, transiciones y cortinillas. Se reproducen una vez y acaban en el logo estático. Hay dos opciones de cada una, con nombres `…-rotate-short-a.svg`, `…-rotate-short-b.svg`, etc., en las mismas piezas y colores.
+
+| El archivo acaba en | Qué hace | Movimiento + quieto |
+|---|---|---|
+| `rotate-short-a` | Medio giro: derecha, hacia ti (destello), izquierda y se abren los dos haces. | 1,1 s + 0,4 s |
+| `rotate-short-b` | Una vuelta entera rápida y se abren los dos haces. | 1,15 s + 0,35 s |
+| `blink-short-a` | Dos apagones cortos, como el parpadeo largo. | 0,73 s + 0,77 s |
+| `blink-short-b` | Tres apagones más seguidos, como la señal de un faro. | 0,68 s + 0,82 s |
+| `ignite-short-a` | Tres destellos en crescendo, un momento a oscuras y la luz sube. | 1,15 s + 0,35 s |
+| `ignite-short-b` | Los cinco destellos del encendido largo, comprimidos, casi sin pausa. | 1,1 s + 0,4 s |
+
+Los tiempos están en `tools/short_timelines.py`.
+
 ## Reglas rápidas
 
 <img src="docs/readme/clear-space.png" alt="Área de respeto X alrededor del logo">
