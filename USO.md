@@ -87,7 +87,7 @@ En `svg/animated/` está el faro con la luz en movimiento, para webs, splash e i
 |---|---|---|
 | `rotate` (giro) | El haz da la vuelta: derecha, hacia ti (destello en la linterna), izquierda y por detrás (la luz se atenúa). | 6 s |
 | `blink` (parpadeo) | La luz queda encendida y se apaga dos veces muy rápido, como la señal de un faro. | 3,2 s |
-| `ignite` (encendido) | El faro encendiéndose: un parpadeo rápido, un segundo a oscuras y luego la luz se enciende del todo, despacio, y se queda encendida. Para intros y splash. | una vez, 4 s |
+| `ignite` (encendido) | El faro encendiéndose: un parpadeo rápido que va cogiendo fuerza, un segundo a oscuras y luego la luz se enciende del todo, despacio, y se queda encendida. Para intros y splash. | una vez, 4 s |
 
 Cada una está en `symbol`, `logo-vertical` y `logo-horizontal`, en `color-on-dark` (preferida) y `color-on-light`; por ejemplo, `svg/animated/farstudio-symbol-color-on-dark-rotate.svg`. Solo se mueve la luz: el faro y el nombre no cambian. Un logo animado por pantalla como mucho; donde el logo va pequeño o junto a texto, el estático.
 
