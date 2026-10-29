@@ -105,7 +105,7 @@ When a place asks for a size that is not here, take the next larger one and let 
 |---|---|---|
 | `rotate` | The beam sweeps around: right, towards you (the lantern flashes), left, then behind (the light dims). | 6 s |
 | `blink` | The light stays on and gives two short flashes off, like a lighthouse signal. | 3.2 s |
-| `ignite` | The lighthouse switching on: a quick flicker, then the light slowly comes on fully and stays lit. For intros and splash screens. | once, 4.5 s |
+| `ignite` | The lighthouse switching on: a very fast flicker, then the light slowly comes on fully and stays lit. For intros and splash screens. | once, 6 s |
 
 Each comes as `symbol`, `logo-vertical` and `logo-horizontal`, in `color-on-dark` (preferred) and `color-on-light`, for example `svg/animated/farstudio-symbol-color-on-dark-rotate.svg`. Only the light moves; the lighthouse and the name stay as they are. Use one animated logo per screen, and the static one wherever the logo is small or sits next to text.
 
