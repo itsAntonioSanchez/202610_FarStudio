@@ -12,6 +12,7 @@ FarStudio's logo, icons, banners and typeface, and which file to use where. FarS
 
 ```
 svg/        Vector masters. The lettering is already converted to outlines: no font needed.
+  animated/         The lighthouse with its light animated (rotate or blink), SVG.
 png/        The same files as PNG, from 3840 px down.
   symbol/           The lighthouse alone.
   logo-vertical/    Lighthouse above the name. The primary version.
@@ -96,6 +97,17 @@ The app icon, the avatar and the favicons at their real sizes, and two of the ba
 
 When a place asks for a size that is not here, take the next larger one and let the platform scale it down, or export from the SVG.
 
+## Animated logo
+
+`svg/animated/` has the lighthouse with its light moving, for the web, splash screens and intros. Pure SVG + CSS: it plays inside an `<img>` tag, with no JavaScript, and it stays still for people who ask their system for reduced motion.
+
+| Animation | What it does | Loop |
+|---|---|---|
+| `rotate` | The beam sweeps around: right, towards you (the lantern flashes), left, then behind (the light dims). | 6 s |
+| `blink` | The light stays on and gives two short flashes off, like a lighthouse signal. | 3.2 s |
+
+Each comes as `symbol`, `logo-vertical` and `logo-horizontal`, in `color-on-dark` (preferred) and `color-on-light`, for example `svg/animated/farstudio-symbol-color-on-dark-rotate.svg`. Only the light moves; the lighthouse and the name stay as they are. Use one animated logo per screen, and the static one wherever the logo is small or sits next to text.
+
 ## Rules
 
 <img src="docs/readme/clear-space.png" alt="Clear space: X, the height of the capitals, around the logo">
@@ -130,6 +142,7 @@ The masters are built in code, so a change to the logo is made once and every si
 ```
 python3 tools/build_masters.py fonts/Outfit-Variable.ttf svg     # SVG masters, lettering as outlines (needs fontTools)
 python3 tools/render.py svg png                                    # every PNG, favicon and banner (needs Playwright + Chromium)
+python3 tools/animate.py svg svg/animated                           # animated SVGs, from the colour masters
 ```
 
 `favicon.ico` (16, 32 and 48) is then packed from `png/favicon/` with Pillow. The pictures of this README are in `docs/readme/`, made by `python3 tools/readme_images.py`.
