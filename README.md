@@ -12,7 +12,7 @@ FarStudio's logo, icons, banners and typeface, and which file to use where. FarS
 
 ```
 svg/        Vector masters. The lettering is already converted to outlines: no font needed.
-  animated/         The lighthouse with its light animated (rotate, blink or ignite), SVG.
+  animated/         The lighthouse switching on, animated SVG.
 png/        The same files as PNG, from 3840 px down.
   symbol/           The lighthouse alone.
   logo-vertical/    Lighthouse above the name. The primary version.
@@ -99,32 +99,15 @@ When a place asks for a size that is not here, take the next larger one and let 
 
 ## Animated logo
 
-<p align="center"><img src="docs/readme/ignite.gif" alt="The FarStudio lighthouse switching on: a few quick flashes, a moment in the dark, then the light slowly comes on" width="480"></p>
+<p align="center"><img src="docs/readme/ignite.gif" alt="The FarStudio lighthouse switching on: three quick flashes, a moment in the dark, then the light comes up and stays on" width="480"></p>
 
-`svg/animated/` has the lighthouse with its light moving, for the web, splash screens and intros. Every animation plays once when the logo appears and then stays on the static logo. Pure SVG + CSS: it plays inside an `<img>` tag, with no JavaScript, and it stays still for people who ask their system for reduced motion.
+`svg/animated/` has the lighthouse switching on (`ignite`), for the web, app launches, splash screens and intros. Three quick flashes, each brighter than the last, a moment in the dark, then the light comes up and the beams open. It lasts **1.5 s** counting the still lit logo at the end (1.15 s of movement), plays **once** when the logo appears and then stays on the static logo.
 
-| Animation | What it does | Length |
-|---|---|---|
-| `rotate` | The beam sweeps around once: right, towards you (the lantern flashes), left, behind (the light dims), then both beams open. | 5.5 s |
-| `blink` | The light gives two short flashes off, like a lighthouse signal, then stays on. | 1.34 s |
-| `ignite` | The lighthouse switching on: a quick flicker that builds up in strength, a second in the dark, then the light slowly comes on fully and stays lit. For intros and splash screens. | 4 s |
+It comes as `symbol`, `logo-vertical` and `logo-horizontal`, in `color-on-dark` (preferred) and `color-on-light`, for example `svg/animated/farstudio-logo-vertical-color-on-dark-ignite.svg`. Pure SVG + CSS: it plays inside an `<img>` tag with no JavaScript, and stays still for people who ask their system for reduced motion. Only the light moves; the lighthouse and the name stay as they are. Use one animated logo per screen, and the static one wherever the logo is small or sits next to text.
 
-Each comes as `symbol`, `logo-vertical` and `logo-horizontal`, in `color-on-dark` (preferred) and `color-on-light`, for example `svg/animated/farstudio-symbol-color-on-dark-rotate.svg`. Only the light moves; the lighthouse and the name stay as they are. To rebuild `ignite` in a game engine or another tool, [`animation/ignite/`](animation/ignite/README.md) has the logo split into layers, the timeline as JSON and the steps. Use one animated logo per screen, and the static one wherever the logo is small or sits next to text.
+To rebuild it in a game engine or another tool, [`animation/ignite/`](animation/ignite/README.md) has the logo split into layers, the timeline as JSON and the steps.
 
-### Short versions (1.5 s)
-
-The same three animations, timed to fit in **1.5 s counting a still pause at the end**, for app launches, transitions and stingers. Like the long ones, they play once and end on the static logo. Two options of each, named `…-rotate-short-a.svg`, `…-rotate-short-b.svg` and so on, in the same pieces and colours as above.
-
-| File ends in | What it does | Moving, then still |
-|---|---|---|
-| `rotate-short-a` | Half turn: right, towards you (flash), left, then both beams open. | 1.1 s + 0.4 s |
-| `rotate-short-b` | One fast full turn, then both beams open. | 1.15 s + 0.35 s |
-| `blink-short-a` | Two short blackouts, like the long blink. | 0.73 s + 0.77 s |
-| `blink-short-b` | Three blackouts closer together, like a lighthouse signal. | 0.68 s + 0.82 s |
-| `ignite-short-a` | Three flashes getting brighter, a moment in the dark, then the light comes up. | 1.15 s + 0.35 s |
-| `ignite-short-b` | The five flashes of the long ignite, compressed, with almost no pause. | 1.1 s + 0.4 s |
-
-The timings live in `tools/short_timelines.py`.
+**The light is always on.** Every static file (logos, symbol, app icon, avatar, favicons, banners) shows the lighthouse lit, exactly like the last frame of the animation. The light is only off during the first second of `ignite`.
 
 ## Rules
 
@@ -160,7 +143,7 @@ The masters are built in code, so a change to the logo is made once and every si
 ```
 python3 tools/build_masters.py fonts/Outfit-Variable.ttf svg     # SVG masters, lettering as outlines (needs fontTools)
 python3 tools/render.py svg png                                    # every PNG, favicon and banner (needs Playwright + Chromium)
-python3 tools/animate.py svg svg/animated                           # animated SVGs, from the colour masters
+python3 tools/animate.py svg svg/animated                           # the animated SVGs (timing in tools/ignite_timeline.py)
 python3 tools/ignite_kit.py svg/animated animation/ignite           # ignite kit: layers and timeline JSON (needs Playwright + Chromium)
 python3 tools/ignite_gif.py svg/animated/farstudio-logo-vertical-color-on-dark-ignite.svg docs/readme/ignite.gif   # the GIF above (needs Playwright + Chromium + Pillow)
 ```
