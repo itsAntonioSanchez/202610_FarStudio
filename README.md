@@ -101,19 +101,19 @@ When a place asks for a size that is not here, take the next larger one and let 
 
 <p align="center"><img src="docs/readme/ignite.gif" alt="The FarStudio lighthouse switching on: a few quick flashes, a moment in the dark, then the light slowly comes on" width="480"></p>
 
-`svg/animated/` has the lighthouse with its light moving, for the web, splash screens and intros. Pure SVG + CSS: it plays inside an `<img>` tag, with no JavaScript, and it stays still for people who ask their system for reduced motion.
+`svg/animated/` has the lighthouse with its light moving, for the web, splash screens and intros. Every animation plays once when the logo appears and then stays on the static logo. Pure SVG + CSS: it plays inside an `<img>` tag, with no JavaScript, and it stays still for people who ask their system for reduced motion.
 
-| Animation | What it does | Loop |
+| Animation | What it does | Length |
 |---|---|---|
-| `rotate` | The beam sweeps around: right, towards you (the lantern flashes), left, then behind (the light dims). | 6 s |
-| `blink` | The light stays on and gives two short flashes off, like a lighthouse signal. | 3.2 s |
-| `ignite` | The lighthouse switching on: a quick flicker that builds up in strength, a second in the dark, then the light slowly comes on fully and stays lit. For intros and splash screens. | once, 4 s |
+| `rotate` | The beam sweeps around once: right, towards you (the lantern flashes), left, behind (the light dims), then both beams open. | 5.5 s |
+| `blink` | The light gives two short flashes off, like a lighthouse signal, then stays on. | 1.34 s |
+| `ignite` | The lighthouse switching on: a quick flicker that builds up in strength, a second in the dark, then the light slowly comes on fully and stays lit. For intros and splash screens. | 4 s |
 
 Each comes as `symbol`, `logo-vertical` and `logo-horizontal`, in `color-on-dark` (preferred) and `color-on-light`, for example `svg/animated/farstudio-symbol-color-on-dark-rotate.svg`. Only the light moves; the lighthouse and the name stay as they are. To rebuild `ignite` in a game engine or another tool, [`animation/ignite/`](animation/ignite/README.md) has the logo split into layers, the timeline as JSON and the steps. Use one animated logo per screen, and the static one wherever the logo is small or sits next to text.
 
 ### Short versions (1.5 s)
 
-The same three animations, timed to fit in **1.5 s counting a still pause at the end**, for app launches, transitions and stingers. They play once and end on the static logo. Two options of each, named `…-rotate-short-a.svg`, `…-rotate-short-b.svg` and so on, in the same pieces and colours as above.
+The same three animations, timed to fit in **1.5 s counting a still pause at the end**, for app launches, transitions and stingers. Like the long ones, they play once and end on the static logo. Two options of each, named `…-rotate-short-a.svg`, `…-rotate-short-b.svg` and so on, in the same pieces and colours as above.
 
 | File ends in | What it does | Moving, then still |
 |---|---|---|

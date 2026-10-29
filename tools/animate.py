@@ -1,12 +1,13 @@
 """Build the animated FarStudio masters from the static colour SVGs.
 
-Three animations of the lighthouse light, all pure SVG + CSS (no JavaScript):
-  rotate  The beam sweeps around the lantern: right, towards you (flash), left, behind (dim).
-  blink   The light stays on and gives two short flashes off, like a lighthouse signal.
-  ignite  Plays once: the lamp flickers, each flash brighter than the last, stays dark for a second, then slowly comes on fully and stays lit.
+Three animations of the lighthouse light, all pure SVG + CSS (no JavaScript). Each plays once and
+ends on the static logo:
+  rotate  The beam sweeps around once: right, towards you (flash), left, behind (dim), then both beams open.
+  blink   The light gives two short flashes off, like a lighthouse signal, then stays on.
+  ignite  The lamp flickers, each flash brighter than the last, stays dark for a second, then slowly comes on fully and stays lit.
 
 Plus short versions of the three (tools/short_timelines.py): 1.5 s each including the still pause at the end,
-played once, two options of each (…-rotate-short-a.svg, …-blink-short-b.svg and so on).
+two options of each (…-rotate-short-a.svg, …-blink-short-b.svg and so on).
 
 Usage: python3 tools/animate.py svg svg/animated
 """
@@ -37,20 +38,8 @@ BASE_CSS = """
 """
 
 CSS = {
-    "rotate": """
-.fs-rotate .fs-beam-r{animation:fs-rot-r 6s cubic-bezier(.45,0,.55,1) infinite}
-.fs-rotate .fs-beam-l{animation:fs-rot-l 6s cubic-bezier(.45,0,.55,1) infinite}
-.fs-rotate .fs-lamp{animation:fs-rot-lamp 6s ease-in-out infinite}
-.fs-rotate .fs-glow{animation:fs-rot-glow 6s ease-in-out infinite}
-@keyframes fs-rot-r{0%{transform:scaleX(1);opacity:1}25%,75%{transform:scaleX(0);opacity:0}100%{transform:scaleX(1);opacity:1}}
-@keyframes fs-rot-l{0%,25%{transform:scaleX(0);opacity:0}50%{transform:scaleX(1);opacity:1}75%,100%{transform:scaleX(0);opacity:0}}
-@keyframes fs-rot-lamp{0%,50%,100%{opacity:1}25%{opacity:1}75%{opacity:.45}}
-@keyframes fs-rot-glow{0%,12%,38%,100%{opacity:0;transform:scale(.6)}25%{opacity:1;transform:scale(1)}}
-""",
-    "blink": """
-.fs-blink .fs-light{animation:fs-blink 3.2s linear infinite}
-@keyframes fs-blink{0%,54%{opacity:1}57%,62%{opacity:.12}65%,72%{opacity:1}75%,80%{opacity:.12}83%,100%{opacity:1}}
-""",
+    "rotate": short_timelines.css("rotate"),
+    "blink": short_timelines.css("blink"),
     "ignite": ignite_timeline.css(),
     **{name: short_timelines.css(name) for name in short_timelines.SHORT},
 }
