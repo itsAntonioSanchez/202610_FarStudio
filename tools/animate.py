@@ -9,6 +9,8 @@ Usage: python3 tools/animate.py svg svg/animated
 """
 import os, sys
 
+import ignite_timeline
+
 SRC = sys.argv[1]
 OUT = sys.argv[2]
 os.makedirs(OUT, exist_ok=True)
@@ -45,14 +47,7 @@ CSS = {
 .fs-blink .fs-light{animation:fs-blink 3.2s linear infinite}
 @keyframes fs-blink{0%,54%{opacity:1}57%,62%{opacity:.12}65%,72%{opacity:1}75%,80%{opacity:.12}83%,100%{opacity:1}}
 """,
-    "ignite": """
-.fs-ignite .fs-lamp{animation:fs-ign-lamp 4s linear 1 both}
-.fs-ignite .fs-beam{animation:fs-ign-beam 4s linear 1 both}
-.fs-ignite .fs-glow{animation:fs-ign-glow 4s ease-in-out 1 both}
-@keyframes fs-ign-lamp{0%{opacity:0.12;animation-timing-function:steps(1,end)}2.5%{opacity:0.3;animation-timing-function:steps(1,end)}5%{opacity:0.12;animation-timing-function:steps(1,end)}7.75%{opacity:0.45;animation-timing-function:steps(1,end)}10%{opacity:0.12;animation-timing-function:steps(1,end)}13.5%{opacity:0.6;animation-timing-function:steps(1,end)}16.5%{opacity:0.12;animation-timing-function:steps(1,end)}19%{opacity:0.8;animation-timing-function:steps(1,end)}21.25%{opacity:0.12;animation-timing-function:steps(1,end)}24.75%{opacity:1;animation-timing-function:steps(1,end)}27.25%{opacity:0.12;animation-timing-function:steps(1,end)}52.25%{opacity:.12;animation-timing-function:cubic-bezier(.4,0,.2,1)}83.75%,100%{opacity:1}}
-@keyframes fs-ign-beam{0%{opacity:0;transform:scaleX(1);animation-timing-function:steps(1,end)}2.5%{opacity:0.12;transform:scaleX(1);animation-timing-function:steps(1,end)}5%{opacity:0;transform:scaleX(1);animation-timing-function:steps(1,end)}7.75%{opacity:0.2;transform:scaleX(1);animation-timing-function:steps(1,end)}10%{opacity:0;transform:scaleX(1);animation-timing-function:steps(1,end)}13.5%{opacity:0.28;transform:scaleX(1);animation-timing-function:steps(1,end)}16.5%{opacity:0;transform:scaleX(1);animation-timing-function:steps(1,end)}19%{opacity:0.38;transform:scaleX(1);animation-timing-function:steps(1,end)}21.25%{opacity:0;transform:scaleX(1);animation-timing-function:steps(1,end)}24.75%{opacity:0.5;transform:scaleX(1);animation-timing-function:steps(1,end)}27.25%{opacity:0;transform:scaleX(1);animation-timing-function:steps(1,end)}53.75%{opacity:0;transform:scaleX(.1);animation-timing-function:cubic-bezier(.35,0,.15,1)}100%{opacity:1;transform:scaleX(1)}}
-@keyframes fs-ign-glow{0%,76%{opacity:0;transform:scale(.6)}90%{opacity:.6;transform:scale(1)}100%{opacity:0;transform:scale(1)}}
-""",
+    "ignite": ignite_timeline.css(),
 }
 
 
