@@ -1,8 +1,9 @@
 """Build the animated FarStudio masters from the static colour SVGs.
 
-Two animations of the lighthouse light, both pure SVG + CSS (no JavaScript):
+Three animations of the lighthouse light, all pure SVG + CSS (no JavaScript):
   rotate  The beam sweeps around the lantern: right, towards you (flash), left, behind (dim).
   blink   The light stays on and gives two short flashes off, like a lighthouse signal.
+  ignite  Plays once: the lamp flickers on and off, then slowly comes on fully and stays lit.
 
 Usage: python3 tools/animate.py svg svg/animated
 """
@@ -19,7 +20,7 @@ VARIANTS = ("color-on-dark", "color-on-light")
 LAMP = f'<rect x="42" y="23" width="16" height="8" fill="{AMBER}"/>'
 
 # Animation rules are scoped to the svg class so several logos can share one page.
-# Shared by both animations. Beams scale from the lantern edge; with reduced motion
+# Shared by every animation. Beams scale from the lantern edge; with reduced motion
 # the logo stays exactly as the static master.
 BASE_CSS = """
 .fs-lamp,.fs-beam,.fs-glow{transform-box:fill-box}
@@ -43,6 +44,14 @@ CSS = {
     "blink": """
 .fs-blink .fs-light{animation:fs-blink 3.2s linear infinite}
 @keyframes fs-blink{0%,54%{opacity:1}57%,62%{opacity:.12}65%,72%{opacity:1}75%,80%{opacity:.12}83%,100%{opacity:1}}
+""",
+    "ignite": """
+.fs-ignite .fs-lamp{animation:fs-ign-lamp 4.5s linear 1 both}
+.fs-ignite .fs-beam{animation:fs-ign-beam 4.5s linear 1 both}
+.fs-ignite .fs-glow{animation:fs-ign-glow 4.5s ease-in-out 1 both}
+@keyframes fs-ign-lamp{0%{opacity:.12}3%{opacity:1}6%{opacity:.12}9%{opacity:.85}11%{opacity:.12}15%{opacity:1}18%{opacity:.12}30%{opacity:.12;animation-timing-function:ease-in-out}75%,100%{opacity:1}}
+@keyframes fs-ign-beam{0%{opacity:0;transform:scaleX(1)}3%{opacity:.5}6%{opacity:0}9%{opacity:.4}11%{opacity:0}15%{opacity:.5}18%{opacity:0;transform:scaleX(1)}40%{opacity:0;transform:scaleX(.15);animation-timing-function:cubic-bezier(.3,0,.2,1)}100%{opacity:1;transform:scaleX(1)}}
+@keyframes fs-ign-glow{0%,70%{opacity:0;transform:scale(.6)}88%{opacity:.6;transform:scale(1)}100%{opacity:0;transform:scale(1)}}
 """,
 }
 
