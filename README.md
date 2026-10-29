@@ -99,6 +99,8 @@ When a place asks for a size that is not here, take the next larger one and let 
 
 ## Animated logo
 
+<p align="center"><img src="docs/readme/ignite.gif" alt="The FarStudio lighthouse switching on: a few quick flashes, a moment in the dark, then the light slowly comes on" width="480"></p>
+
 `svg/animated/` has the lighthouse with its light moving, for the web, splash screens and intros. Pure SVG + CSS: it plays inside an `<img>` tag, with no JavaScript, and it stays still for people who ask their system for reduced motion.
 
 | Animation | What it does | Loop |
@@ -145,6 +147,7 @@ python3 tools/build_masters.py fonts/Outfit-Variable.ttf svg     # SVG masters, 
 python3 tools/render.py svg png                                    # every PNG, favicon and banner (needs Playwright + Chromium)
 python3 tools/animate.py svg svg/animated                           # animated SVGs, from the colour masters
 python3 tools/ignite_kit.py svg/animated animation/ignite           # ignite kit: layers and timeline JSON (needs Playwright + Chromium)
+python3 tools/ignite_gif.py svg/animated/farstudio-logo-vertical-color-on-dark-ignite.svg docs/readme/ignite.gif   # the GIF above (needs Playwright + Chromium + Pillow)
 ```
 
 `favicon.ico` (16, 32 and 48) is then packed from `png/favicon/` with Pillow. The pictures of this README are in `docs/readme/`, made by `python3 tools/readme_images.py`.

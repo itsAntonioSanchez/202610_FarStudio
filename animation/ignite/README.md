@@ -1,5 +1,7 @@
 # Ignite: the lighthouse switching on
 
+<p align="center"><img src="../../docs/readme/ignite.gif" alt="The lighthouse switching on" width="480"></p>
+
 Everything needed to rebuild the FarStudio "ignite" animation in a game engine, an app or a video tool. The finished reference is the SVG in `svg/animated/` (for example `farstudio-logo-vertical-color-on-dark-ignite.svg`): open it in a browser to see what the result must look like.
 
 It lasts **4 s** and plays **once**. The lamp gives five quick flashes, each brighter than the last, then stays dark for about a second, then comes on slowly while the beams grow out of the lantern. A soft glow blooms behind the lighthouse near the end and fades. The logo then stays lit, identical to the static logo.
@@ -192,6 +194,7 @@ The timing lives in `tools/ignite_timeline.py`. After a change there:
 ```
 python3 tools/animate.py svg svg/animated                  # the animated SVGs
 python3 tools/ignite_kit.py svg/animated animation/ignite  # this kit: layers and JSON (needs Playwright + Chromium)
+python3 tools/ignite_gif.py svg/animated/farstudio-logo-vertical-color-on-dark-ignite.svg docs/readme/ignite.gif  # the GIF
 ```
 
 Then update the tables above.
