@@ -5,15 +5,15 @@ Times are in milliseconds from the start. Each key holds its values until the ne
 After the last key the values stay as they are: the animation plays once and the light stays on.
 """
 
-DURATION = 4000
+DURATION = 1500  # moving until 1150 ms, then still on the lit logo
 OFF = 0.12  # lamp opacity while the light is off
 
-# (start, length, lamp opacity): each flash brighter than the last
-FLASHES = [(100, 100, 0.30), (310, 90, 0.45), (540, 120, 0.60), (760, 90, 0.80), (990, 100, 1.00)]
+# (start, length, lamp opacity): three flashes, each brighter than the last
+FLASHES = [(60, 70, 0.35), (190, 70, 0.60), (330, 80, 1.00)]
 
-LAMP_ON = (2090, 3350, [0.4, 0, 0.2, 1])     # slow switch-on after a second in the dark
-BEAMS_OPEN = (2150, 4000, [0.35, 0, 0.15, 1])  # beams grow out of the lantern
-GLOW = (3040, 3600, 4000, 0.6, [0.42, 0, 0.58, 1])  # start, peak, end, peak opacity, curve
+LAMP_ON = (600, 1000, [0.4, 0, 0.2, 1])       # comes on after a moment in the dark
+BEAMS_OPEN = (620, 1150, [0.35, 0, 0.15, 1])  # beams grow out of the lantern
+GLOW = (850, 1000, 1150, 0.5, [0.42, 0, 0.58, 1])  # start, peak, end, peak opacity, curve
 
 
 def _flash_keys(value, extra):

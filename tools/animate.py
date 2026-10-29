@@ -1,20 +1,14 @@
 """Build the animated FarStudio masters from the static colour SVGs.
 
-Three animations of the lighthouse light, all pure SVG + CSS (no JavaScript). Each plays once and
-ends on the static logo:
-  rotate  The beam sweeps around once: right, towards you (flash), left, behind (dim), then both beams open.
-  blink   The light gives two short flashes off, like a lighthouse signal, then stays on.
-  ignite  The lamp flickers, each flash brighter than the last, stays dark for a second, then slowly comes on fully and stays lit.
-
-Plus short versions of the three (tools/short_timelines.py): 1.5 s each including the still pause at the end,
-two options of each (…-rotate-short-a.svg, …-blink-short-b.svg and so on).
+The lighthouse switching on, in pure SVG + CSS (no JavaScript): three quick flashes, each brighter
+than the last, a moment in the dark, then the light comes up and the beams open. 1.5 s counting the
+still lit logo at the end; it plays once and stays on the static logo. Timing: tools/ignite_timeline.py.
 
 Usage: python3 tools/animate.py svg svg/animated
 """
 import os, sys
 
 import ignite_timeline
-import short_timelines
 
 SRC = sys.argv[1]
 OUT = sys.argv[2]
@@ -27,7 +21,7 @@ VARIANTS = ("color-on-dark", "color-on-light")
 LAMP = f'<rect x="42" y="23" width="16" height="8" fill="{AMBER}"/>'
 
 # Animation rules are scoped to the svg class so several logos can share one page.
-# Shared by every animation. Beams scale from the lantern edge; with reduced motion
+# Shared by the animation. Beams scale from the lantern edge; with reduced motion
 # the logo stays exactly as the static master.
 BASE_CSS = """
 .fs-lamp,.fs-beam,.fs-glow{transform-box:fill-box}
@@ -37,12 +31,7 @@ BASE_CSS = """
 @media (prefers-reduced-motion:reduce){.fs-anim *{animation:none!important}.fs-glow{opacity:0!important}}
 """
 
-CSS = {
-    "rotate": short_timelines.css("rotate"),
-    "blink": short_timelines.css("blink"),
-    "ignite": ignite_timeline.css(),
-    **{name: short_timelines.css(name) for name in short_timelines.SHORT},
-}
+CSS = {"ignite": ignite_timeline.css()}
 
 
 def animate(svg, anim, uid):

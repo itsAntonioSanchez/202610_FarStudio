@@ -8,7 +8,7 @@ Guía rápida de qué archivo usar en cada sitio. La misma guía en inglés est�
 
 ```
 svg/        Maestros vectoriales. El texto ya está convertido a trazos: no hace falta tener la fuente.
-  animated/         Faro con la luz animada (giro, parpadeo o encendido), SVG.
+  animated/         El faro encendiéndose, SVG animado.
 png/        Los mismos archivos en PNG, de 3840 px hacia abajo.
   symbol/           El faro solo.
   logo-vertical/    Faro encima del nombre. Versión principal.
@@ -81,32 +81,15 @@ Si un sitio pide un tamaño que no está, escoge el siguiente más grande y deja
 
 ## Logo animado
 
-<p align="center"><img src="docs/readme/ignite.gif" alt="El faro de FarStudio encendiéndose: unos destellos rápidos, un momento a oscuras y la luz se enciende despacio" width="480"></p>
+<p align="center"><img src="docs/readme/ignite.gif" alt="El faro de FarStudio encendiéndose: tres destellos rápidos, un momento a oscuras y la luz sube y se queda encendida" width="480"></p>
 
-En `svg/animated/` está el faro con la luz en movimiento, para webs, splash e intros. Todas se reproducen una vez al aparecer el logo y se quedan en el logo estático. Es SVG + CSS puro: se reproduce dentro de una etiqueta `<img>`, sin JavaScript, y se queda quieto para quien tenga activado reducir el movimiento en su sistema.
+En `svg/animated/` está el faro encendiéndose (`ignite`), para webs, arranques de app, splash e intros. Tres destellos rápidos, cada uno más fuerte que el anterior, un momento a oscuras, y la luz sube mientras se abren los haces. Dura **1,5 s** contando el logo ya quieto y encendido al final (1,15 s de movimiento), se reproduce **una vez** al aparecer y se queda en el logo estático.
 
-| Animación | Qué hace | Duración |
-|---|---|---|
-| `rotate` (giro) | El haz da una vuelta: derecha, hacia ti (destello en la linterna), izquierda, por detrás (la luz se atenúa) y se abren los dos haces. | 5,5 s |
-| `blink` (parpadeo) | La luz se apaga dos veces muy rápido, como la señal de un faro, y se queda encendida. | 1,34 s |
-| `ignite` (encendido) | El faro encendiéndose: un parpadeo rápido que va cogiendo fuerza, un segundo a oscuras y luego la luz se enciende del todo, despacio, y se queda encendida. Para intros y splash. | 4 s |
+Está en `symbol`, `logo-vertical` y `logo-horizontal`, en `color-on-dark` (preferida) y `color-on-light`; por ejemplo, `svg/animated/farstudio-logo-vertical-color-on-dark-ignite.svg`. Es SVG + CSS puro: se reproduce dentro de una etiqueta `<img>`, sin JavaScript, y se queda quieto para quien tenga activado reducir el movimiento. Solo se mueve la luz: el faro y el nombre no cambian. Un logo animado por pantalla como mucho; donde el logo va pequeño o junto a texto, el estático.
 
-Cada una está en `symbol`, `logo-vertical` y `logo-horizontal`, en `color-on-dark` (preferida) y `color-on-light`; por ejemplo, `svg/animated/farstudio-symbol-color-on-dark-rotate.svg`. Solo se mueve la luz: el faro y el nombre no cambian. Para montar el encendido en un motor de juego u otra herramienta, en [`animation/ignite/`](animation/ignite/README.md) están el logo separado en capas, la línea de tiempo en JSON y los pasos. Un logo animado por pantalla como mucho; donde el logo va pequeño o junto a texto, el estático.
+Para montarlo en un motor de juego u otra herramienta, en [`animation/ignite/`](animation/ignite/README.md) están el logo separado en capas, la línea de tiempo en JSON y los pasos.
 
-### Versiones cortas (1,5 s)
-
-Las mismas tres animaciones con tiempos que caben en **1,5 s contando una pausa quieta al final**, para arranques de app, transiciones y cortinillas. Como las largas, se reproducen una vez y acaban en el logo estático. Hay dos opciones de cada una, con nombres `…-rotate-short-a.svg`, `…-rotate-short-b.svg`, etc., en las mismas piezas y colores.
-
-| El archivo acaba en | Qué hace | Movimiento + quieto |
-|---|---|---|
-| `rotate-short-a` | Medio giro: derecha, hacia ti (destello), izquierda y se abren los dos haces. | 1,1 s + 0,4 s |
-| `rotate-short-b` | Una vuelta entera rápida y se abren los dos haces. | 1,15 s + 0,35 s |
-| `blink-short-a` | Dos apagones cortos, como el parpadeo largo. | 0,73 s + 0,77 s |
-| `blink-short-b` | Tres apagones más seguidos, como la señal de un faro. | 0,68 s + 0,82 s |
-| `ignite-short-a` | Tres destellos en crescendo, un momento a oscuras y la luz sube. | 1,15 s + 0,35 s |
-| `ignite-short-b` | Los cinco destellos del encendido largo, comprimidos, casi sin pausa. | 1,1 s + 0,4 s |
-
-Los tiempos están en `tools/short_timelines.py`.
+**La luz siempre está encendida.** Todos los archivos estáticos (logos, símbolo, icono de app, avatar, favicons, banners) muestran el faro encendido, igual que el último fotograma de la animación. La luz solo está apagada durante el primer segundo del encendido.
 
 ## Reglas rápidas
 

@@ -4,7 +4,7 @@
 
 Everything needed to rebuild the FarStudio "ignite" animation in a game engine, an app or a video tool. The finished reference is the SVG in `svg/animated/` (for example `farstudio-logo-vertical-color-on-dark-ignite.svg`): open it in a browser to see what the result must look like.
 
-It lasts **4 s** and plays **once**. The lamp gives five quick flashes, each brighter than the last, then stays dark for about a second, then comes on slowly while the beams grow out of the lantern. A soft glow blooms behind the lighthouse near the end and fades. The logo then stays lit, identical to the static logo.
+It lasts **1.5 s** and plays **once**: 1.15 s of movement, then the lit logo holds still. The lamp gives three quick flashes, each brighter than the last, stays dark for a moment, then comes on while the beams grow out of the lantern. A soft glow blooms behind the lighthouse near the end and fades. The logo then stays lit, identical to the static logo.
 
 Only the amber light moves. The lighthouse and the name never move, scale or change color.
 
@@ -53,37 +53,35 @@ Times in milliseconds. Opacity multiplies the layer's own alpha (the PNGs alread
 | From | Value | Then |
 |---|---|---|
 | 0 | 0.12 | hold |
-| 100 | 0.30 | hold (flash 1) |
-| 200 | 0.12 | hold |
-| 310 | 0.45 | hold (flash 2) |
-| 400 | 0.12 | hold |
-| 540 | 0.60 | hold (flash 3) |
-| 660 | 0.12 | hold |
-| 760 | 0.80 | hold (flash 4) |
-| 850 | 0.12 | hold |
-| 990 | 1.00 | hold (flash 5) |
-| 1090 | 0.12 | hold: dark for about a second |
-| 2090 | 0.12 | ease `cubic-bezier(0.4, 0, 0.2, 1)` to the next row |
-| 3350 | 1.00 | stays |
+| 60 | 0.35 | hold (flash 1) |
+| 130 | 0.12 | hold |
+| 190 | 0.60 | hold (flash 2) |
+| 260 | 0.12 | hold |
+| 330 | 1.00 | hold (flash 3) |
+| 410 | 0.12 | hold: dark for a moment |
+| 600 | 0.12 | ease `cubic-bezier(0.4, 0, 0.2, 1)` to the next row |
+| 1000 | 1.00 | stays |
 
 **Beams** (opacity and horizontal scale, both beams the same)
 
 | From | Opacity | Scale X | Then |
 |---|---|---|---|
 | 0 | 0 | 1 | hold |
-| each flash | half the lamp's value (0.15, 0.225, 0.3, 0.4, 0.5) | 1 | hold |
+| each flash | half the lamp's value (0.175, 0.3, 0.5) | 1 | hold |
 | each flash's end | 0 | 1 | hold |
-| 2150 | 0 | 0.1 | ease `cubic-bezier(0.35, 0, 0.15, 1)` to the next row |
-| 4000 | 1 | 1 | stays |
+| 620 | 0 | 0.1 | ease `cubic-bezier(0.35, 0, 0.15, 1)` to the next row |
+| 1150 | 1 | 1 | stays |
 
 **Glow** (opacity and uniform scale)
 
 | From | Opacity | Scale | Then |
 |---|---|---|---|
 | 0 | 0 | 0.6 | hold |
-| 3040 | 0 | 0.6 | ease `cubic-bezier(0.42, 0, 0.58, 1)` |
-| 3600 | 0.6 | 1 | ease `cubic-bezier(0.42, 0, 0.58, 1)` |
-| 4000 | 0 | 1 | stays |
+| 850 | 0 | 0.6 | ease `cubic-bezier(0.42, 0, 0.58, 1)` |
+| 1000 | 0.5 | 1 | ease `cubic-bezier(0.42, 0, 0.58, 1)` |
+| 1150 | 0 | 1 | stays |
+
+From 1150 to 1500 nothing moves: the lit logo holds before the animation counts as finished.
 
 The same keys are in `ignite-timeline.json`, ready to read in code. If the numbers here and the JSON ever disagree, the JSON wins.
 
@@ -116,7 +114,7 @@ It plays when the image loads. To play it again, load the image again (for examp
 
 ## In Unity (sketch)
 
-Five `Image` (UI) or `SpriteRenderer` layers stacked in the order above, with the pivots set as described. Read the JSON as a `TextAsset` and drive every layer from a single time value; a tween library like LitMotion only has to move that time from 0 to 4000.
+Five `Image` (UI) or `SpriteRenderer` layers stacked in the order above, with the pivots set as described. Read the JSON as a `TextAsset` and drive every layer from a single time value; a tween library like LitMotion only has to move that time from 0 to 1500.
 
 ```csharp
 using System;

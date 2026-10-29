@@ -11,7 +11,7 @@ import ignite_timeline as tl
 SRC, OUT = sys.argv[1], sys.argv[2]
 W, H = 720, 500
 STEP = 30     # ms per frame
-HOLD = 2000   # the lit logo stays on screen before the GIF starts over
+HOLD = 1500   # the lit logo stays on screen before the GIF starts over
 
 svg = open(SRC).read()
 html = (f'<html><body style="margin:0;background:#111111;width:{W}px;height:{H}px;display:flex;'
