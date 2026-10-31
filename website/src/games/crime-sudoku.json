@@ -132,10 +132,10 @@
           "ja": "プライバシー設定を変更するには？"
         },
         "a": {
-          "en": "Open Options in the game and go to Privacy. There you can change how ads are personalized at any time. You can read the full details in our privacy policy.",
-          "es": "Abre Opciones en el juego y entra en Privacidad. Ahí puedes cambiar en cualquier momento cómo se personalizan los anuncios. Tienes todos los detalles en nuestra política de privacidad.",
-          "zh-hans": "在游戏中打开“选项”，进入“隐私”。你可以随时在那里更改广告的个性化设置。完整说明请参阅我们的隐私政策。",
-          "ja": "ゲーム内の「オプション」から「プライバシー」を開くと、広告のパーソナライズ設定をいつでも変更できます。詳しくはプライバシーポリシーをご覧ください。"
+          "en": "Open Options in the game and go to General. There you can turn \"Personalized ads\" and \"Share gameplay statistics\" on or off at any time. You can read the full details in our privacy policy.",
+          "es": "Abre Opciones en el juego y entra en General. Ahí puedes activar o desactivar en cualquier momento «Anuncios personalizados» y «Compartir estadísticas de juego». Tienes todos los detalles en nuestra política de privacidad.",
+          "zh-hans": "在游戏中打开“选项”，进入“通用”。你可以随时在那里开启或关闭“个性化广告”和“分享游戏统计”。完整说明请参阅我们的隐私政策。",
+          "ja": "ゲーム内の「オプション」から「一般」を開くと、「パーソナライズ広告」と「プレイ統計を共有」をいつでもオン・オフできます。詳しくはプライバシーポリシーをご覧ください。"
         }
       }
     ]
