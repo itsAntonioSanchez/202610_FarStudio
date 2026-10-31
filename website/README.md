@@ -43,14 +43,7 @@ Los logos, favicons e imagen para compartir están en `public/assets/brand/`. Cu
 - Comando de build: `node build.mjs`
 - Directorio de salida: `dist`
 
-Se trabaja en `main` y se publica llevando solo `website/` a `website-prod`:
-
-```
-git checkout website-prod
-git checkout main -- website
-git commit -m "Publish website" && git push
-git checkout main
-```
+Se trabaja en `main`. **La publicación es automática:** cada vez que entra en `main` un cambio dentro de `website/`, la acción de GitHub `Publish website` (`.github/workflows/publish-website.yml`) comprueba que la web compila y copia solo `website/` a `website-prod`; Cloudflare la despliega en un par de minutos. Los cambios que no tocan `website/` (por ejemplo, en `branding/`) no publican nada. También se puede lanzar a mano desde la pestaña **Actions** de GitHub.
 
 `dist/_headers` marca la política de privacidad como `noindex` y `dist/sitemap.xml` la deja fuera. Las direcciones sin idioma (`/`, `/privacy`, `/about`, `/games/<juego>`) llevan a cada visitante a la misma página en su idioma según el navegador (inglés si no hay coincidencia), así que `farstudios.dev/privacy` sirve como enlace corto para las tiendas.
 
