@@ -74,6 +74,19 @@ Cada juego se describe en un único archivo de datos (nombre, slug, frase, enlac
 
 Un sitio estático (por ejemplo Astro), publicado en Cloudflare Pages, que ya usáis para la build web de Crime Sudoku. Sin servidor ni base de datos: rápido, barato y fácil de mantener. Astro trae rutas por idioma de serie, y los juegos y textos van como archivos de datos, como arriba.
 
+## Distribución elegida (wireframes)
+
+Elegida a partir de los wireframes en gris (31-10-2026):
+
+| Parte | Opción | Resumen |
+|---|---|---|
+| Portada | A · Escaparate | El último juego a todo lo ancho con botones de tienda, rejilla de juegos (con "Próximamente"), franja "Sobre nosotros" |
+| Página de juego | B · Ficha lateral fija | Columna izquierda fija con icono, nombre, tiendas y datos; a la derecha tráiler, capturas, descripción y puntos fuertes. En móvil, barra de descarga fija abajo |
+| About us | A · Manifiesto y equipo | Frase grande, tres valores, rejilla del equipo, bloque de contacto |
+| Privacy | A · Índice lateral | Índice a la izquierda con salto a cada juego; texto a la derecha. En móvil el índice se pliega arriba |
+| Cabecera | 1 | Logo a la izquierda; Games, About y desplegable de idioma a la derecha |
+| Pie | Columnas | Símbolo, Juegos, Estudio, Idioma; debajo © y Privacy |
+
 ## Por decidir
 
 - **Idiomas extra:** ¿añadimos coreano y portugués de Brasil a los cuatro pedidos?
