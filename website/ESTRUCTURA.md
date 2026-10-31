@@ -111,5 +111,5 @@ La web es la noche y el ámbar es la luz del faro.
 ## Por decidir
 
 - **Idiomas extra:** ¿añadimos coreano y portugués de Brasil a los cuatro pedidos?
-- **Dominio:** decidido, `farstudio.dev`.
+- **Dominio:** decidido, `farstudios.dev`.
 - **Juegos en la portada:** ¿solo Crime Sudoku de momento, o también los que están en desarrollo con un "Próximamente"?

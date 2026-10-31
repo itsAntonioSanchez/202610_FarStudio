@@ -56,7 +56,7 @@ git checkout main
 
 ## Antes de publicar
 
-- Crear el buzón `hello@farstudio.dev` (por ejemplo con Cloudflare Email Routing) o cambiar el email en `src/site.json`.
+- Crear el buzón `hello@farstudios.dev` (por ejemplo con Cloudflare Email Routing) o cambiar el email en `src/site.json`.
 - Revisar la política de privacidad (es un borrador) y confirmar qué datos recoge cada juego.
 - Revisar con nativos los textos en chino y japonés.
 - Sustituir los textos y el arte provisionales de Crime Sudoku.
