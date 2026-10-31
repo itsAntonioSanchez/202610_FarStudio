@@ -2,7 +2,7 @@
 //
 // Content lives in src/: site.json (settings), i18n/<lang>.json (interface text),
 // games/<slug>.json (one file per game), privacy/<lang>.html (the policy).
-// Brand files (logos, favicons, link preview) are copied from ../branding.
+// Brand files (logos, favicons, link preview) live in public/assets/brand, synced from ../branding when present.
 
 import { readFileSync, writeFileSync, mkdirSync, rmSync, cpSync, existsSync, readdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
@@ -339,19 +339,23 @@ ${urls}
 rmSync(OUT, { recursive: true, force: true });
 mkdirSync(OUT, { recursive: true });
 
+// Brand files: refreshed from ../branding when it exists (the full repository), so the site
+// always uses the current logos; public/assets/brand keeps a copy so website/ also builds on its own.
+const brand = {
+  'svg/farstudio-logo-horizontal-color-on-dark.svg': 'assets/brand/logo-horizontal.svg',
+  'svg/farstudio-symbol-color-on-dark.svg': 'assets/brand/symbol.svg',
+  'png/favicon/favicon-32x32.png': 'assets/brand/favicon-32x32.png',
+  'png/favicon/favicon-192x192.png': 'assets/brand/favicon-192x192.png',
+  'png/favicon/apple-touch-icon-180x180.png': 'assets/brand/apple-touch-icon-180x180.png',
+  'png/banners/link-preview-1200x630.png': 'assets/brand/link-preview-1200x630.png',
+  'png/favicon/favicon.ico': 'favicon.ico',
+};
+if (existsSync(BRAND)) {
+  for (const [from, to] of Object.entries(brand)) cpSync(join(BRAND, from), join(ROOT, 'public', to));
+}
 cpSync(join(ROOT, 'public'), join(OUT), { recursive: true });
 cpSync(join(SRC, 'styles.css'), join(OUT, 'assets', 'site.css'));
 cpSync(join(SRC, 'trailer.js'), join(OUT, 'assets', 'trailer.js'));
-const brand = {
-  'svg/farstudio-logo-horizontal-color-on-dark.svg': 'logo-horizontal.svg',
-  'svg/farstudio-symbol-color-on-dark.svg': 'symbol.svg',
-  'png/favicon/favicon-32x32.png': 'favicon-32x32.png',
-  'png/favicon/favicon-192x192.png': 'favicon-192x192.png',
-  'png/favicon/apple-touch-icon-180x180.png': 'apple-touch-icon-180x180.png',
-  'png/banners/link-preview-1200x630.png': 'link-preview-1200x630.png',
-};
-for (const [from, to] of Object.entries(brand)) cpSync(join(BRAND, from), join(OUT, 'assets', 'brand', to));
-cpSync(join(BRAND, 'png/favicon/favicon.ico'), join(OUT, 'favicon.ico'));
 for (const g of games) {
   const dir = join(SRC, 'games', g.slug);
   if (existsSync(dir)) cpSync(dir, join(OUT, 'assets', 'games', g.slug), { recursive: true });
