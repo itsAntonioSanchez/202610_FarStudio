@@ -2,9 +2,25 @@
   "htmlLang": "en",
   "name": "English",
   "short": "EN",
-  "match": ["en"],
-  "nav": { "skip": "Skip to content", "home": "home", "main": "Main", "games": "Games", "about": "About", "language": "Language" },
-  "footer": { "tagline": "Indie games for phones and PC.", "games": "Games", "studio": "Studio", "contact": "Contact", "language": "Language", "privacy": "Privacy" },
+  "match": [
+    "en"
+  ],
+  "nav": {
+    "skip": "Skip to content",
+    "home": "home",
+    "main": "Main",
+    "games": "Games",
+    "about": "About",
+    "language": "Language"
+  },
+  "footer": {
+    "tagline": "Indie games for phones and PC.",
+    "games": "Games",
+    "studio": "Studio",
+    "contact": "Contact",
+    "language": "Language",
+    "privacy": "Privacy"
+  },
   "home": {
     "title": "FarStudio · Indie games",
     "description": "FarStudio is an indie studio making games for phones and PC.",
@@ -41,9 +57,18 @@
     "intro": "FarStudio is a small independent studio. Like a lighthouse, we want our games to be easy to spot, easy to pick up and worth coming back to.",
     "valuesTitle": "What we care about",
     "values": [
-      { "title": "Small and sharp", "text": "Games you understand in seconds and keep playing for weeks." },
-      { "title": "Each game, its own world", "text": "Every game has its own look and voice. The studio only signs it." },
-      { "title": "Respect for players", "text": "Fair prices, no dark patterns, and as little data as possible." }
+      {
+        "title": "Small and sharp",
+        "text": "Games you understand in seconds and keep playing for weeks."
+      },
+      {
+        "title": "Each game, its own world",
+        "text": "Every game has its own look and voice. The studio only signs it."
+      },
+      {
+        "title": "Respect for players",
+        "text": "Fair prices, no dark patterns, and as little data as possible."
+      }
     ],
     "teamTitle": "The team",
     "contactTitle": "Get in touch",
@@ -57,5 +82,16 @@
     "updated": "Last updated",
     "prevails": "This is a translation; if it differs from the English version, the English version applies."
   },
-  "notFound": { "title": "This page is lost at sea.", "text": "The link may be old or mistyped. Head back to the harbour." }
+  "support": {
+    "title": "Support",
+    "byStudio": "A FarStudio game",
+    "contactTitle": "Contact us",
+    "contactText": "Questions, problems or ideas: write to us and we will answer as soon as we can.",
+    "faqTitle": "Frequently asked questions",
+    "privacyLink": "Privacy policy"
+  },
+  "notFound": {
+    "title": "This page is lost at sea.",
+    "text": "The link may be old or mistyped. Head back to the harbour."
+  }
 }

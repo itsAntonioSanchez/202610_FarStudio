@@ -206,7 +206,7 @@ function gamePage(lang, g) {
     <p class="muted">${esc(loc(g.tagline, lang))}</p>
     <div class="stack">${storeButtons(g, t)}</div>
     ${facts ? `<dl class="facts">${facts}</dl>` : ''}
-    <p class="small"><a href="${url(lang, 'about/')}#contact">${esc(t.game.support)}</a> · <a href="${url(lang, 'privacy/')}#${g.slug}">${esc(t.footer.privacy)}</a></p>
+    <p class="small"><a href="${url(lang, `games/${g.slug}/support/`)}">${esc(t.game.support)}</a> · <a href="${url(lang, 'privacy/')}#${g.slug}">${esc(t.footer.privacy)}</a></p>
   </aside>
   <div class="gmain">
     ${trailer}
@@ -222,6 +222,35 @@ function gamePage(lang, g) {
   const script = g.trailer ? `<script src="/assets/trailer.js" defer></script>` : '';
   const image = g.art?.share ? gameAsset(g, g.art.share) : undefined;
   return page({ lang, t, title: `${name} · FarStudio`, description: loc(g.tagline, lang), path, image }, body, script);
+}
+
+function supportPage(lang, g) {
+  const t = T[lang];
+  const s = t.support;
+  const name = loc(g.name, lang);
+  const path = `games/${g.slug}/support/`;
+  const subject = encodeURIComponent(`${name} · ${s.title}`);
+  const faq = (g.support?.faq ?? [])
+    .map((f, i) => `<details class="faq"${i === 0 ? ' open' : ''}><summary>${esc(loc(f.q, lang))}</summary><p>${esc(loc(f.a, lang))}</p></details>`)
+    .join('');
+  const body = `
+<div class="support wrap">
+  <header class="support-head">
+    ${art(gameAsset(g, g.art?.icon), `${name} icon`, 'icon', '')}
+    <div>
+      <p class="eyebrow">${esc(s.title)}</p>
+      <h1>${esc(name)}</h1>
+      <p class="muted">${esc(s.byStudio)}</p>
+    </div>
+  </header>
+  <section class="studio contact" aria-labelledby="contact-title">
+    <div><h2 id="contact-title">${esc(s.contactTitle)}</h2><p class="muted">${esc(s.contactText)}</p></div>
+    <a class="btn pri" href="mailto:${esc(site.email)}?subject=${subject}">${esc(site.email)}</a>
+  </section>
+  ${faq ? `<section aria-labelledby="faq-title" class="faqs"><h2 id="faq-title">${esc(s.faqTitle)}</h2>${faq}</section>` : ''}
+  <p class="small muted"><a href="${url(lang, 'privacy/')}#${g.slug}">${esc(s.privacyLink)}</a> · <a href="${url(lang, `games/${g.slug}/`)}">${esc(name)}</a></p>
+</div>`;
+  return page({ lang, t, title: `${s.title} · ${name} · FarStudio`, description: `${s.title}: ${name}. ${s.contactText}`, path }, body);
 }
 
 function aboutPage(lang) {
@@ -321,7 +350,7 @@ function notFound() {
 }
 
 function sitemap() {
-  const paths = ['', 'about/', ...games.map((g) => `games/${g.slug}/`)];
+  const paths = ['', 'about/', ...games.flatMap((g) => [`games/${g.slug}/`, `games/${g.slug}/support/`])];
   const urls = paths
     .flatMap((p) =>
       LANGS.map(
@@ -363,7 +392,7 @@ for (const g of games) {
 }
 
 write('index.html', rootPage());
-for (const p of ['about/', 'privacy/', ...games.map((g) => `games/${g.slug}/`)]) write(`${p}index.html`, rootPage(p));
+for (const p of ['about/', 'privacy/', ...games.flatMap((g) => [`games/${g.slug}/`, `games/${g.slug}/support/`])]) write(`${p}index.html`, rootPage(p));
 write('404.html', notFound());
 write('sitemap.xml', sitemap());
 write('robots.txt', `User-agent: *\nAllow: /\n\nSitemap: ${abs('/sitemap.xml')}\n`);
@@ -372,6 +401,9 @@ for (const lang of LANGS) {
   write(`${lang}/index.html`, homePage(lang));
   write(`${lang}/about/index.html`, aboutPage(lang));
   write(`${lang}/privacy/index.html`, privacyPage(lang));
-  for (const g of games) write(`${lang}/games/${g.slug}/index.html`, gamePage(lang, g));
+  for (const g of games) {
+    write(`${lang}/games/${g.slug}/index.html`, gamePage(lang, g));
+    write(`${lang}/games/${g.slug}/support/index.html`, supportPage(lang, g));
+  }
 }
 console.log(`Built ${LANGS.length} languages, ${games.length} game(s) into dist/`);
