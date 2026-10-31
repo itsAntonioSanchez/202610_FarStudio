@@ -52,7 +52,7 @@ git commit -m "Publish website" && git push
 git checkout main
 ```
 
-`dist/_headers` marca la política de privacidad como `noindex` y `dist/sitemap.xml` la deja fuera. La raíz `/` lleva a cada visitante a su idioma según el navegador (inglés si no hay coincidencia).
+`dist/_headers` marca la política de privacidad como `noindex` y `dist/sitemap.xml` la deja fuera. Las direcciones sin idioma (`/`, `/privacy`, `/about`, `/games/<juego>`) llevan a cada visitante a la misma página en su idioma según el navegador (inglés si no hay coincidencia), así que `farstudios.dev/privacy` sirve como enlace corto para las tiendas.
 
 ## Antes de publicar
 

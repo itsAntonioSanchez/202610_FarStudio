@@ -278,20 +278,21 @@ function privacyPage(lang) {
   return page({ lang, t, title: `${p.title} · FarStudio`, description: p.description, path: 'privacy/', noindex: true }, body);
 }
 
-// Root: send visitors to their browser's language, English otherwise.
-function rootPage() {
+// Language-less addresses (/, /privacy/, /about/, /games/<slug>/): send visitors to the same page
+// in their browser's language, English otherwise. Short links like farstudios.dev/privacy work.
+function rootPage(path = '') {
   const map = Object.fromEntries(LANGS.map((l) => [l, T[l].match ?? [l]]));
-  const links = LANGS.map((l) => `<li><a href="/${l}/" hreflang="${T[l].htmlLang}" lang="${T[l].htmlLang}">${esc(T[l].name)}</a></li>`).join('');
-  const alternates = LANGS.map((l) => `<link rel="alternate" hreflang="${T[l].htmlLang}" href="${abs(`/${l}/`)}">`).join('\n  ');
+  const links = LANGS.map((l) => `<li><a href="/${l}/${path}" hreflang="${T[l].htmlLang}" lang="${T[l].htmlLang}">${esc(T[l].name)}</a></li>`).join('');
+  const alternates = LANGS.map((l) => `<link rel="alternate" hreflang="${T[l].htmlLang}" href="${abs(`/${l}/${path}`)}">`).join('\n  ');
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FarStudio</title>
-  <link rel="canonical" href="${abs(`/${DEFAULT}/`)}">
+  ${path ? '<meta name="robots" content="noindex">' : `<link rel="canonical" href="${abs(`/${DEFAULT}/`)}">
   ${alternates}
-  <link rel="alternate" hreflang="x-default" href="${abs(`/${DEFAULT}/`)}">
+  <link rel="alternate" hreflang="x-default" href="${abs(`/${DEFAULT}/`)}">`}
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <script>
   (function () {
@@ -299,13 +300,13 @@ function rootPage() {
     for (var i = 0; i < prefs.length; i++) {
       var p = String(prefs[i]).toLowerCase();
       for (var l in map) for (var j = 0; j < map[l].length; j++) {
-        if (p === map[l][j] || p.indexOf(map[l][j] + '-') === 0) { location.replace('/' + l + '/' + location.hash); return; }
+        if (p === map[l][j] || p.indexOf(map[l][j] + '-') === 0) { location.replace('/' + l + '/${path}' + location.hash); return; }
       }
     }
-    location.replace('/${DEFAULT}/' + location.hash);
+    location.replace('/${DEFAULT}/${path}' + location.hash);
   })();
   </script>
-  <noscript><meta http-equiv="refresh" content="0; url=/${DEFAULT}/"></noscript>
+  <noscript><meta http-equiv="refresh" content="0; url=/${DEFAULT}/${path}"></noscript>
   <style>body{margin:0;background:#111;color:#f4f4f2;font:16px/1.5 system-ui,sans-serif;display:grid;place-items:center;min-height:100vh}a{color:#f5a623}</style>
 </head>
 <body><ul>${links}</ul></body>
@@ -362,10 +363,11 @@ for (const g of games) {
 }
 
 write('index.html', rootPage());
+for (const p of ['about/', 'privacy/', ...games.map((g) => `games/${g.slug}/`)]) write(`${p}index.html`, rootPage(p));
 write('404.html', notFound());
 write('sitemap.xml', sitemap());
 write('robots.txt', `User-agent: *\nAllow: /\n\nSitemap: ${abs('/sitemap.xml')}\n`);
-write('_headers', `/*/privacy/*\n  X-Robots-Tag: noindex\n\n/assets/*\n  Cache-Control: public, max-age=86400\n`);
+write('_headers', `/*/privacy/*\n  X-Robots-Tag: noindex\n\n/privacy/*\n  X-Robots-Tag: noindex\n\n/assets/*\n  Cache-Control: public, max-age=86400\n`);
 for (const lang of LANGS) {
   write(`${lang}/index.html`, homePage(lang));
   write(`${lang}/about/index.html`, aboutPage(lang));
