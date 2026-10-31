@@ -1,6 +1,6 @@
 # Applying the FarStudio brand to Crime Sudoku
 
-A task for the agent working in the Crime Sudoku repository (`202610_crimesudoku`). Crime Sudoku is made by **FarStudio**; this repository (`202610_FarStudioBranding`) holds the studio's brand. Read its [README](../README.md) first: it says which file goes where and the rules every use must follow.
+A task for the agent working in the Crime Sudoku repository (`202610_crimesudoku`). Crime Sudoku is made by **FarStudio**; this repository (`202610_FarStudio`) holds the studio's brand in `branding/`. Read its [README](../README.md) first: it says which file goes where and the rules every use must follow.
 
 The game keeps its own identity (its app icon, the pulp look, the "CRIME SUDOKU" name). The studio only signs it, the way a publisher card or a "developed by" line does.
 
