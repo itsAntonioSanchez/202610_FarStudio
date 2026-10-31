@@ -187,7 +187,7 @@ For trailers or social posts, record the SVG in a browser on its background (bla
 
 ## Regenerating
 
-The timing lives in `tools/ignite_timeline.py`. After a change there:
+The timing lives in `tools/ignite_timeline.py`. After a change there, from the `branding/` folder:
 
 ```
 python3 tools/animate.py svg svg/animated                  # the animated SVGs

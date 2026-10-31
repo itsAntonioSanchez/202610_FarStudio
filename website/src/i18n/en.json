@@ -1,0 +1,61 @@
+{
+  "htmlLang": "en",
+  "name": "English",
+  "short": "EN",
+  "match": ["en"],
+  "nav": { "skip": "Skip to content", "home": "home", "main": "Main", "games": "Games", "about": "About", "language": "Language" },
+  "footer": { "tagline": "Indie games for phones and PC.", "games": "Games", "studio": "Studio", "contact": "Contact", "language": "Language", "privacy": "Privacy" },
+  "home": {
+    "title": "FarStudio · Indie games",
+    "description": "FarStudio is an indie studio making games for phones and PC.",
+    "newGame": "New game",
+    "seeGame": "See the game",
+    "ourGames": "Our games",
+    "comingSoon": "Coming soon",
+    "nextGame": "Next game",
+    "inDevelopment": "In development",
+    "studioTitle": "A small studio, seen from far away",
+    "studioText": "We make short, sharp games for phones and PC."
+  },
+  "game": {
+    "soon": "Soon",
+    "platforms": "Platforms",
+    "release": "Release",
+    "languages": "Languages",
+    "price": "Price",
+    "free": "Free",
+    "screenshot": "Screenshot",
+    "screenshots": "Screenshots",
+    "features": "Features",
+    "playTrailer": "Play trailer",
+    "trailerSoon": "Trailer coming soon",
+    "signature": "A FarStudio game",
+    "moreGames": "More games",
+    "support": "Support"
+  },
+  "about": {
+    "title": "About us",
+    "description": "Who we are and how to reach FarStudio.",
+    "eyebrow": "About us",
+    "statement": "We make games you can see from far away.",
+    "intro": "FarStudio is a small independent studio. Like a lighthouse, we want our games to be easy to spot, easy to pick up and worth coming back to.",
+    "valuesTitle": "What we care about",
+    "values": [
+      { "title": "Small and sharp", "text": "Games you understand in seconds and keep playing for weeks." },
+      { "title": "Each game, its own world", "text": "Every game has its own look and voice. The studio only signs it." },
+      { "title": "Respect for players", "text": "Fair prices, no dark patterns, and as little data as possible." }
+    ],
+    "teamTitle": "The team",
+    "contactTitle": "Get in touch",
+    "contactText": "Press, support or business: write to us and we will answer."
+  },
+  "privacy": {
+    "title": "Privacy policy",
+    "description": "How FarStudio and its games handle your data.",
+    "toc": "Contents",
+    "byGame": "By game",
+    "updated": "Last updated",
+    "prevails": "This is a translation; if it differs from the English version, the English version applies."
+  },
+  "notFound": { "title": "This page is lost at sea.", "text": "The link may be old or mistyped. Head back to the harbour." }
+}

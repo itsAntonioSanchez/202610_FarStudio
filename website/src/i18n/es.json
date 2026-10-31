@@ -1,0 +1,61 @@
+{
+  "htmlLang": "es",
+  "name": "Español",
+  "short": "ES",
+  "match": ["es"],
+  "nav": { "skip": "Saltar al contenido", "home": "inicio", "main": "Principal", "games": "Juegos", "about": "Nosotros", "language": "Idioma" },
+  "footer": { "tagline": "Juegos indie para móvil y PC.", "games": "Juegos", "studio": "Estudio", "contact": "Contacto", "language": "Idioma", "privacy": "Privacidad" },
+  "home": {
+    "title": "FarStudio · Juegos indie",
+    "description": "FarStudio es un estudio indie que hace juegos para móvil y PC.",
+    "newGame": "Nuevo juego",
+    "seeGame": "Ver el juego",
+    "ourGames": "Nuestros juegos",
+    "comingSoon": "Próximamente",
+    "nextGame": "Próximo juego",
+    "inDevelopment": "En desarrollo",
+    "studioTitle": "Un estudio pequeño que se ve desde lejos",
+    "studioText": "Hacemos juegos cortos y bien afilados para móvil y PC."
+  },
+  "game": {
+    "soon": "Pronto",
+    "platforms": "Plataformas",
+    "release": "Lanzamiento",
+    "languages": "Idiomas",
+    "price": "Precio",
+    "free": "Gratis",
+    "screenshot": "Captura",
+    "screenshots": "Capturas",
+    "features": "Características",
+    "playTrailer": "Ver tráiler",
+    "trailerSoon": "Tráiler próximamente",
+    "signature": "Un juego de FarStudio",
+    "moreGames": "Más juegos",
+    "support": "Soporte"
+  },
+  "about": {
+    "title": "Nosotros",
+    "description": "Quiénes somos y cómo contactar con FarStudio.",
+    "eyebrow": "Nosotros",
+    "statement": "Hacemos juegos que se ven desde lejos.",
+    "intro": "FarStudio es un estudio independiente pequeño. Como un faro, queremos que nuestros juegos se vean fácilmente, se entiendan al momento y den ganas de volver.",
+    "valuesTitle": "Lo que nos importa",
+    "values": [
+      { "title": "Pequeños y afilados", "text": "Juegos que se entienden en segundos y se juegan durante semanas." },
+      { "title": "Cada juego, su mundo", "text": "Cada juego tiene su propio aspecto y su voz. El estudio solo lo firma." },
+      { "title": "Respeto por quien juega", "text": "Precios justos, sin trampas y con los menos datos posibles." }
+    ],
+    "teamTitle": "El equipo",
+    "contactTitle": "Escríbenos",
+    "contactText": "Prensa, soporte o negocios: escríbenos y te respondemos."
+  },
+  "privacy": {
+    "title": "Política de privacidad",
+    "description": "Cómo tratan tus datos FarStudio y sus juegos.",
+    "toc": "Contenido",
+    "byGame": "Por juego",
+    "updated": "Última actualización",
+    "prevails": "Esto es una traducción; si difiere de la versión en inglés, prevalece la inglesa."
+  },
+  "notFound": { "title": "Esta página se ha perdido en el mar.", "text": "Puede que el enlace sea antiguo o tenga un error. Vuelve a puerto." }
+}

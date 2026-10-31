@@ -1,0 +1,61 @@
+{
+  "htmlLang": "ja",
+  "name": "日本語",
+  "short": "日本語",
+  "match": ["ja"],
+  "nav": { "skip": "本文へスキップ", "home": "ホーム", "main": "メイン", "games": "ゲーム", "about": "スタジオについて", "language": "言語" },
+  "footer": { "tagline": "スマホと PC のためのインディーゲーム。", "games": "ゲーム", "studio": "スタジオ", "contact": "お問い合わせ", "language": "言語", "privacy": "プライバシー" },
+  "home": {
+    "title": "FarStudio · インディーゲーム",
+    "description": "FarStudio はスマホと PC 向けのゲームを作るインディースタジオです。",
+    "newGame": "新作",
+    "seeGame": "ゲームを見る",
+    "ourGames": "ゲーム一覧",
+    "comingSoon": "近日公開",
+    "nextGame": "次回作",
+    "inDevelopment": "開発中",
+    "studioTitle": "遠くからでも見える、小さなスタジオ",
+    "studioText": "スマホと PC 向けに、短くて鋭いゲームを作っています。"
+  },
+  "game": {
+    "soon": "近日公開",
+    "platforms": "プラットフォーム",
+    "release": "リリース",
+    "languages": "対応言語",
+    "price": "価格",
+    "free": "無料",
+    "screenshot": "スクリーンショット",
+    "screenshots": "スクリーンショット",
+    "features": "特徴",
+    "playTrailer": "トレーラーを再生",
+    "trailerSoon": "トレーラーは近日公開",
+    "signature": "FarStudio のゲーム",
+    "moreGames": "ほかのゲーム",
+    "support": "サポート"
+  },
+  "about": {
+    "title": "スタジオについて",
+    "description": "FarStudio について、そしてお問い合わせ方法。",
+    "eyebrow": "スタジオについて",
+    "statement": "遠くからでも見えるゲームを作っています。",
+    "intro": "FarStudio は小さな独立系スタジオです。灯台のように、見つけやすく、すぐに遊べて、また戻ってきたくなるゲームを目指しています。",
+    "valuesTitle": "大切にしていること",
+    "values": [
+      { "title": "小さく、鋭く", "text": "数秒でわかり、何週間も遊べるゲーム。" },
+      { "title": "ゲームごとに、その世界を", "text": "それぞれのゲームに独自の見た目と声があります。スタジオは署名するだけです。" },
+      { "title": "プレイヤーへの敬意", "text": "適正な価格、ダークパターンなし、データは最小限に。" }
+    ],
+    "teamTitle": "チーム",
+    "contactTitle": "お問い合わせ",
+    "contactText": "取材、サポート、ビジネスのご相談はメールでどうぞ。"
+  },
+  "privacy": {
+    "title": "プライバシーポリシー",
+    "description": "FarStudio とそのゲームにおけるデータの取り扱いについて。",
+    "toc": "目次",
+    "byGame": "ゲーム別",
+    "updated": "最終更新日",
+    "prevails": "これは翻訳です。英語版と内容が異なる場合は英語版が優先されます。"
+  },
+  "notFound": { "title": "このページは海で迷子になりました。", "text": "リンクが古いか、入力に誤りがあるかもしれません。港に戻りましょう。" }
+}

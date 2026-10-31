@@ -1,6 +1,6 @@
 """Render the preview images shown in README.md (docs/preview/), from the SVG masters.
 
-python3 tools/previews.py      (run from the repository root; needs Playwright + Chromium)
+python3 tools/previews.py      (run from the branding/ folder; needs Playwright + Chromium)
 """
 import base64, os
 from playwright.sync_api import sync_playwright

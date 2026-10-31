@@ -1,0 +1,44 @@
+{
+  "_note": "Placeholder copy: replace tagline, description, features, stores and art before launch.",
+  "slug": "crime-sudoku",
+  "order": 1,
+  "featured": true,
+  "name": "Crime Sudoku",
+  "tagline": {
+    "en": "Every grid is a case. Find the culprit one number at a time.",
+    "es": "Cada tablero es un caso. Encuentra al culpable número a número.",
+    "zh-hans": "每一个数独都是一桩案件。一个数字一个数字地找出真凶。",
+    "ja": "どの盤面もひとつの事件。数字ひとつずつ、犯人を追いつめよう。"
+  },
+  "description": {
+    "en": "Crime Sudoku mixes classic sudoku with pulp detective stories. Solve the grid and the clues fall into place.\n\nShort cases for the bus, longer ones for a quiet evening.",
+    "es": "Crime Sudoku mezcla el sudoku clásico con historias de detectives pulp. Resuelve el tablero y las pistas encajan solas.\n\nCasos cortos para el autobús y otros más largos para una tarde tranquila.",
+    "zh-hans": "《Crime Sudoku》把经典数独和复古侦探故事结合在一起。解开数独，线索自然浮现。\n\n有适合通勤的短案件，也有适合安静夜晚的长案件。",
+    "ja": "Crime Sudoku は、定番の数独とパルプ風の探偵物語を組み合わせたゲームです。盤面を解けば、手がかりがつながります。\n\n移動中に遊べる短い事件から、夜にじっくり楽しめる長い事件まで。"
+  },
+  "platforms": ["iOS", "Android"],
+  "release": { "en": "Coming 2026", "es": "Próximamente, 2026", "zh-hans": "2026 年推出", "ja": "2026 年配信予定" },
+  "languages": ["English", "Español"],
+  "free": false,
+  "price": "",
+  "stores": [
+    { "id": "appstore", "url": "" },
+    { "id": "googleplay", "url": "" }
+  ],
+  "trailer": "",
+  "art": { "key": "", "cover": "", "icon": "", "screenshots": [], "share": "" },
+  "features": [
+    {
+      "title": { "en": "A case per grid", "es": "Un caso por tablero", "zh-hans": "一盘一案", "ja": "盤面ごとに事件" },
+      "text": { "en": "Each puzzle hides a suspect.", "es": "Cada sudoku esconde un sospechoso.", "zh-hans": "每道谜题都藏着一名嫌疑人。", "ja": "どのパズルにも容疑者が潜んでいる。" }
+    },
+    {
+      "title": { "en": "Pulp noir look", "es": "Estética pulp noir", "zh-hans": "复古黑色风格", "ja": "パルプ・ノワールの世界" },
+      "text": { "en": "Case files, clues and newspaper headlines.", "es": "Expedientes, pistas y titulares de periódico.", "zh-hans": "卷宗、线索与报纸头条。", "ja": "事件ファイル、手がかり、新聞の見出し。" }
+    },
+    {
+      "title": { "en": "Play offline", "es": "Sin conexión", "zh-hans": "离线畅玩", "ja": "オフラインで遊べる" },
+      "text": { "en": "No connection needed.", "es": "No necesita internet.", "zh-hans": "无需联网。", "ja": "通信環境は不要です。" }
+    }
+  ]
+}
