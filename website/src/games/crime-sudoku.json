@@ -112,20 +112,6 @@
       },
       {
         "q": {
-          "en": "How do I restore \"Remove ads\"?",
-          "es": "¿Cómo restauro «Quitar anuncios»?",
-          "zh-hans": "如何恢复“移除广告”？",
-          "ja": "「広告を削除」を復元するには？"
-        },
-        "a": {
-          "en": "Open Options in the game and tap \"Restore purchases\". Use the same Apple ID you bought it with; you will not be charged again.",
-          "es": "Abre Opciones en el juego y toca «Restaurar compras». Usa el mismo Apple ID con el que lo compraste; no se te cobrará de nuevo.",
-          "zh-hans": "在游戏中打开“选项”，点击“恢复购买”。请使用购买时的同一个 Apple ID，不会重复扣费。",
-          "ja": "ゲーム内の「オプション」を開き、「購入を復元」をタップしてください。購入時と同じ Apple ID をお使いください。再度請求されることはありません。"
-        }
-      },
-      {
-        "q": {
           "en": "How do I change my privacy settings?",
           "es": "¿Cómo cambio mis ajustes de privacidad?",
           "zh-hans": "如何更改隐私设置？",
