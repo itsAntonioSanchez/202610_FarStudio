@@ -138,7 +138,7 @@ Outfit (Google Fonts, OFL). In the name: **FAR** at weight 600 and STUDIO at wei
 
 ## Regenerating the files
 
-The masters are built in code, so a change to the logo is made once and every size follows.
+The masters are built in code, so a change to the logo is made once and every size follows. Run these commands from the `branding/` folder.
 
 ```
 python3 tools/build_masters.py fonts/Outfit-Variable.ttf svg     # SVG masters, lettering as outlines (needs fontTools)

@@ -1,4 +1,4 @@
-"""Render the illustrations of the README into docs/readme/ (run from the repository root)."""
+"""Render the illustrations of the README into docs/readme/ (run from the branding/ folder)."""
 import os, base64, re
 from playwright.sync_api import sync_playwright
 
