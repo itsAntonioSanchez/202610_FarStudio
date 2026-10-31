@@ -87,6 +87,27 @@ Elegida a partir de los wireframes en gris (31-10-2026):
 | Cabecera | 1 | Logo a la izquierda; Games, About y desplegable de idioma a la derecha |
 | Pie | Columnas | Símbolo, Juegos, Estudio, Idioma; debajo © y Privacy |
 
+## Estilo elegido: Faro nocturno
+
+La web es la noche y el ámbar es la luz del faro.
+
+| Token | Valor | Uso |
+|---|---|---|
+| Fondo | `#111111` | Todas las páginas |
+| Superficie | `#181818` | Tarjetas, ficha lateral, franja del estudio |
+| Pie | `#0B0B0B` | Pie de página |
+| Texto | `#F4F4F2` | Texto principal |
+| Texto secundario | `#9A9A96` | Descripciones, datos |
+| Líneas | `#2A2A2A` / `#3A3A3A` | Separadores / borde de botón secundario |
+| Ámbar | `#F5A623` | Solo el botón principal, números de los puntos fuertes, antetítulos y el brillo detrás del destacado |
+
+- **Logo:** horizontal `color-on-dark` en la cabecera; símbolo `color-on-dark` en franja, pie y firma.
+- **Tipografía:** Outfit; títulos en seminegrita (600), interletraje ligeramente cerrado. Noto Sans SC/JP/KR para chino, japonés y coreano.
+- **Formas:** esquinas suaves (botones 10 px, tarjetas 16 px, imágenes 12 px), sin bordes en tarjetas.
+- **Botones:** principal ámbar con texto negro; secundario con borde gris y texto blanco.
+- **Hero:** arte del juego a sangre, con un brillo ámbar suave y el texto en una caja translúcida.
+- Maqueta de referencia: `/mnt/project-files/website/estilos/` (pestaña "Faro nocturno").
+
 ## Por decidir
 
 - **Idiomas extra:** ¿añadimos coreano y portugués de Brasil a los cuatro pedidos?
