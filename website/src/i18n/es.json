@@ -2,9 +2,25 @@
   "htmlLang": "es",
   "name": "Español",
   "short": "ES",
-  "match": ["es"],
-  "nav": { "skip": "Saltar al contenido", "home": "inicio", "main": "Principal", "games": "Juegos", "about": "Nosotros", "language": "Idioma" },
-  "footer": { "tagline": "Juegos indie para móvil y PC.", "games": "Juegos", "studio": "Estudio", "contact": "Contacto", "language": "Idioma", "privacy": "Privacidad" },
+  "match": [
+    "es"
+  ],
+  "nav": {
+    "skip": "Saltar al contenido",
+    "home": "inicio",
+    "main": "Principal",
+    "games": "Juegos",
+    "about": "Nosotros",
+    "language": "Idioma"
+  },
+  "footer": {
+    "tagline": "Juegos indie para móvil y PC.",
+    "games": "Juegos",
+    "studio": "Estudio",
+    "contact": "Contacto",
+    "language": "Idioma",
+    "privacy": "Privacidad"
+  },
   "home": {
     "title": "FarStudio · Juegos indie",
     "description": "FarStudio es un estudio indie que hace juegos para móvil y PC.",
@@ -41,9 +57,18 @@
     "intro": "FarStudio es un estudio independiente pequeño. Como un faro, queremos que nuestros juegos se vean fácilmente, se entiendan al momento y den ganas de volver.",
     "valuesTitle": "Lo que nos importa",
     "values": [
-      { "title": "Pequeños y afilados", "text": "Juegos que se entienden en segundos y se juegan durante semanas." },
-      { "title": "Cada juego, su mundo", "text": "Cada juego tiene su propio aspecto y su voz. El estudio solo lo firma." },
-      { "title": "Respeto por quien juega", "text": "Precios justos, sin trampas y con los menos datos posibles." }
+      {
+        "title": "Pequeños y afilados",
+        "text": "Juegos que se entienden en segundos y se juegan durante semanas."
+      },
+      {
+        "title": "Cada juego, su mundo",
+        "text": "Cada juego tiene su propio aspecto y su voz. El estudio solo lo firma."
+      },
+      {
+        "title": "Respeto por quien juega",
+        "text": "Precios justos, sin trampas y con los menos datos posibles."
+      }
     ],
     "teamTitle": "El equipo",
     "contactTitle": "Escríbenos",
@@ -57,5 +82,16 @@
     "updated": "Última actualización",
     "prevails": "Esto es una traducción; si difiere de la versión en inglés, prevalece la inglesa."
   },
-  "notFound": { "title": "Esta página se ha perdido en el mar.", "text": "Puede que el enlace sea antiguo o tenga un error. Vuelve a puerto." }
+  "support": {
+    "title": "Soporte",
+    "byStudio": "Un juego de FarStudio",
+    "contactTitle": "Escríbenos",
+    "contactText": "Dudas, problemas o ideas: escríbenos y te responderemos lo antes posible.",
+    "faqTitle": "Preguntas frecuentes",
+    "privacyLink": "Política de privacidad"
+  },
+  "notFound": {
+    "title": "Esta página se ha perdido en el mar.",
+    "text": "Puede que el enlace sea antiguo o tenga un error. Vuelve a puerto."
+  }
 }

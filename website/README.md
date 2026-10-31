@@ -33,6 +33,7 @@ Los logos, favicons e imagen para compartir están en `public/assets/brand/`. Cu
 - **Añadir un juego:** crea `src/games/<slug>.json` copiando el de Crime Sudoku, y sus imágenes en `src/games/<slug>/` (los nombres de archivo van en `art`). La portada, el pie, el sitemap y la página `/<idioma>/games/<slug>/` salen solos. Añade su sección en `src/privacy/*.html` con `<h2 id="<slug>">`.
 - **Enlaces de tienda:** rellena `url` en `stores`. Mientras esté vacío, el botón sale como "Pronto".
 - **Tráiler:** pon el ID del vídeo de YouTube en `trailer`.
+- **Soporte:** cada juego tiene su página `/<idioma>/games/<slug>/support/` (la URL de soporte que piden las tiendas; `farstudios.dev/games/<slug>/support` lleva al idioma del visitante). Las preguntas frecuentes van en `support.faq` del JSON del juego.
 - **Añadir un idioma:** añade su código a `languages` en `src/site.json`, crea `src/i18n/<código>.json` y `src/privacy/<código>.html`, y añade los textos del idioma en cada juego (si faltan, se usa el inglés).
 - **Equipo en About:** rellena `team` en `src/site.json` (`name`, `role` por idioma y `photo` opcional). Si está vacío, la sección no se muestra.
 
