@@ -16,29 +16,128 @@
     "zh-hans": "《Crime Sudoku》把经典数独和复古侦探故事结合在一起。解开数独，线索自然浮现。\n\n有适合通勤的短案件，也有适合安静夜晚的长案件。",
     "ja": "Crime Sudoku は、定番の数独とパルプ風の探偵物語を組み合わせたゲームです。盤面を解けば、手がかりがつながります。\n\n移動中に遊べる短い事件から、夜にじっくり楽しめる長い事件まで。"
   },
-  "platforms": ["iOS", "Android"],
-  "release": { "en": "Coming 2026", "es": "Próximamente, 2026", "zh-hans": "2026 年推出", "ja": "2026 年配信予定" },
-  "languages": ["English", "Español"],
+  "platforms": [
+    "iOS",
+    "Android"
+  ],
+  "release": {
+    "en": "Coming 2026",
+    "es": "Próximamente, 2026",
+    "zh-hans": "2026 年推出",
+    "ja": "2026 年配信予定"
+  },
+  "languages": [
+    "English",
+    "Español"
+  ],
   "free": false,
   "price": "",
   "stores": [
-    { "id": "appstore", "url": "" },
-    { "id": "googleplay", "url": "" }
+    {
+      "id": "appstore",
+      "url": ""
+    },
+    {
+      "id": "googleplay",
+      "url": ""
+    }
   ],
   "trailer": "",
-  "art": { "key": "", "cover": "", "icon": "", "screenshots": [], "share": "" },
+  "art": {
+    "key": "",
+    "cover": "",
+    "icon": "",
+    "screenshots": [],
+    "share": ""
+  },
   "features": [
     {
-      "title": { "en": "A case per grid", "es": "Un caso por tablero", "zh-hans": "一盘一案", "ja": "盤面ごとに事件" },
-      "text": { "en": "Each puzzle hides a suspect.", "es": "Cada sudoku esconde un sospechoso.", "zh-hans": "每道谜题都藏着一名嫌疑人。", "ja": "どのパズルにも容疑者が潜んでいる。" }
+      "title": {
+        "en": "A case per grid",
+        "es": "Un caso por tablero",
+        "zh-hans": "一盘一案",
+        "ja": "盤面ごとに事件"
+      },
+      "text": {
+        "en": "Each puzzle hides a suspect.",
+        "es": "Cada sudoku esconde un sospechoso.",
+        "zh-hans": "每道谜题都藏着一名嫌疑人。",
+        "ja": "どのパズルにも容疑者が潜んでいる。"
+      }
     },
     {
-      "title": { "en": "Pulp noir look", "es": "Estética pulp noir", "zh-hans": "复古黑色风格", "ja": "パルプ・ノワールの世界" },
-      "text": { "en": "Case files, clues and newspaper headlines.", "es": "Expedientes, pistas y titulares de periódico.", "zh-hans": "卷宗、线索与报纸头条。", "ja": "事件ファイル、手がかり、新聞の見出し。" }
+      "title": {
+        "en": "Pulp noir look",
+        "es": "Estética pulp noir",
+        "zh-hans": "复古黑色风格",
+        "ja": "パルプ・ノワールの世界"
+      },
+      "text": {
+        "en": "Case files, clues and newspaper headlines.",
+        "es": "Expedientes, pistas y titulares de periódico.",
+        "zh-hans": "卷宗、线索与报纸头条。",
+        "ja": "事件ファイル、手がかり、新聞の見出し。"
+      }
     },
     {
-      "title": { "en": "Play offline", "es": "Sin conexión", "zh-hans": "离线畅玩", "ja": "オフラインで遊べる" },
-      "text": { "en": "No connection needed.", "es": "No necesita internet.", "zh-hans": "无需联网。", "ja": "通信環境は不要です。" }
+      "title": {
+        "en": "Play offline",
+        "es": "Sin conexión",
+        "zh-hans": "离线畅玩",
+        "ja": "オフラインで遊べる"
+      },
+      "text": {
+        "en": "No connection needed.",
+        "es": "No necesita internet.",
+        "zh-hans": "无需联网。",
+        "ja": "通信環境は不要です。"
+      }
     }
-  ]
+  ],
+  "support": {
+    "faq": [
+      {
+        "q": {
+          "en": "How do I get my progress back on a new device?",
+          "es": "¿Cómo recupero mi progreso en un dispositivo nuevo?",
+          "zh-hans": "如何在新设备上恢复游戏进度？",
+          "ja": "新しい端末で進行状況を引き継ぐには？"
+        },
+        "a": {
+          "en": "Your progress is saved with iCloud. On the new device, sign in with the same Apple ID, make sure iCloud is turned on for Crime Sudoku (Settings > your name > iCloud) and open the game: your progress will download by itself.",
+          "es": "Tu progreso se guarda en iCloud. En el dispositivo nuevo, inicia sesión con el mismo Apple ID, comprueba que iCloud está activado para Crime Sudoku (Ajustes > tu nombre > iCloud) y abre el juego: el progreso se descargará solo.",
+          "zh-hans": "你的进度会通过 iCloud 保存。在新设备上登录同一个 Apple ID，确认已为 Crime Sudoku 开启 iCloud（设置 > 你的名字 > iCloud），然后打开游戏，进度会自动下载。",
+          "ja": "進行状況は iCloud に保存されます。新しい端末で同じ Apple ID にサインインし、Crime Sudoku の iCloud がオンになっていることを確認して（設定 > ユーザ名 > iCloud）ゲームを開くと、進行状況が自動的にダウンロードされます。"
+        }
+      },
+      {
+        "q": {
+          "en": "How do I restore \"Remove ads\"?",
+          "es": "¿Cómo restauro «Quitar anuncios»?",
+          "zh-hans": "如何恢复“移除广告”？",
+          "ja": "「広告を削除」を復元するには？"
+        },
+        "a": {
+          "en": "Open Options in the game and tap \"Restore purchases\". Use the same Apple ID you bought it with; you will not be charged again.",
+          "es": "Abre Opciones en el juego y toca «Restaurar compras». Usa el mismo Apple ID con el que lo compraste; no se te cobrará de nuevo.",
+          "zh-hans": "在游戏中打开“选项”，点击“恢复购买”。请使用购买时的同一个 Apple ID，不会重复扣费。",
+          "ja": "ゲーム内の「オプション」を開き、「購入を復元」をタップしてください。購入時と同じ Apple ID をお使いください。再度請求されることはありません。"
+        }
+      },
+      {
+        "q": {
+          "en": "How do I change my privacy settings?",
+          "es": "¿Cómo cambio mis ajustes de privacidad?",
+          "zh-hans": "如何更改隐私设置？",
+          "ja": "プライバシー設定を変更するには？"
+        },
+        "a": {
+          "en": "Open Options in the game and go to Privacy. There you can change how ads are personalized at any time. You can read the full details in our privacy policy.",
+          "es": "Abre Opciones en el juego y entra en Privacidad. Ahí puedes cambiar en cualquier momento cómo se personalizan los anuncios. Tienes todos los detalles en nuestra política de privacidad.",
+          "zh-hans": "在游戏中打开“选项”，进入“隐私”。你可以随时在那里更改广告的个性化设置。完整说明请参阅我们的隐私政策。",
+          "ja": "ゲーム内の「オプション」から「プライバシー」を開くと、広告のパーソナライズ設定をいつでも変更できます。詳しくはプライバシーポリシーをご覧ください。"
+        }
+      }
+    ]
+  }
 }
