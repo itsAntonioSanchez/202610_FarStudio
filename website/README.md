@@ -26,7 +26,7 @@ src/styles.css          Todo el estilo.
 public/                 Se copia tal cual a dist/ (tipografía Outfit en woff2).
 ```
 
-Los logos, favicons e imagen para compartir se copian de `../branding/` en cada build: no se duplican aquí.
+Los logos, favicons e imagen para compartir están en `public/assets/brand/`. Cuando se compila dentro del repo completo, se actualizan solos desde `../branding/`; así `website/` también compila por su cuenta (por ejemplo, en la rama `website-prod`).
 
 ## Tareas habituales
 
@@ -38,15 +38,25 @@ Los logos, favicons e imagen para compartir se copian de `../branding/` en cada 
 
 ## Publicar (Cloudflare Pages)
 
+- Rama de producción: `website-prod` (solo contiene la carpeta `website/`)
 - Directorio raíz: `website`
 - Comando de build: `node build.mjs`
 - Directorio de salida: `dist`
+
+Se trabaja en `main` y se publica llevando solo `website/` a `website-prod`:
+
+```
+git checkout website-prod
+git checkout main -- website
+git commit -m "Publish website" && git push
+git checkout main
+```
 
 `dist/_headers` marca la política de privacidad como `noindex` y `dist/sitemap.xml` la deja fuera. La raíz `/` lleva a cada visitante a su idioma según el navegador (inglés si no hay coincidencia).
 
 ## Antes de publicar
 
-- Confirmar dominio y email en `src/site.json`.
+- Crear el buzón `hello@farstudios.dev` (por ejemplo con Cloudflare Email Routing) o cambiar el email en `src/site.json`.
 - Revisar la política de privacidad (es un borrador) y confirmar qué datos recoge cada juego.
 - Revisar con nativos los textos en chino y japonés.
 - Sustituir los textos y el arte provisionales de Crime Sudoku.
