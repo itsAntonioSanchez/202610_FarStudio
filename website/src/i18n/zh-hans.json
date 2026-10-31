@@ -1,0 +1,61 @@
+{
+  "htmlLang": "zh-Hans",
+  "name": "简体中文",
+  "short": "中文",
+  "match": ["zh-hans", "zh-cn", "zh-sg", "zh"],
+  "nav": { "skip": "跳到正文", "home": "首页", "main": "主导航", "games": "游戏", "about": "关于我们", "language": "语言" },
+  "footer": { "tagline": "为手机和 PC 打造的独立游戏。", "games": "游戏", "studio": "工作室", "contact": "联系我们", "language": "语言", "privacy": "隐私" },
+  "home": {
+    "title": "FarStudio · 独立游戏",
+    "description": "FarStudio 是一家为手机和 PC 制作游戏的独立工作室。",
+    "newGame": "新作",
+    "seeGame": "了解游戏",
+    "ourGames": "我们的游戏",
+    "comingSoon": "敬请期待",
+    "nextGame": "下一款游戏",
+    "inDevelopment": "开发中",
+    "studioTitle": "一家远远就能看见的小工作室",
+    "studioText": "我们为手机和 PC 制作短小精悍的游戏。"
+  },
+  "game": {
+    "soon": "即将推出",
+    "platforms": "平台",
+    "release": "发售",
+    "languages": "语言",
+    "price": "价格",
+    "free": "免费",
+    "screenshot": "截图",
+    "screenshots": "截图",
+    "features": "特色",
+    "playTrailer": "播放预告片",
+    "trailerSoon": "预告片即将推出",
+    "signature": "FarStudio 出品",
+    "moreGames": "更多游戏",
+    "support": "支持"
+  },
+  "about": {
+    "title": "关于我们",
+    "description": "认识 FarStudio，以及如何联系我们。",
+    "eyebrow": "关于我们",
+    "statement": "我们做远远就能看见的游戏。",
+    "intro": "FarStudio 是一家小型独立工作室。像灯塔一样，我们希望自己的游戏一眼就能被发现、一上手就能明白，并且让人想要再回来。",
+    "valuesTitle": "我们在意的事",
+    "values": [
+      { "title": "小而精", "text": "几秒就能上手，几周都玩不腻。" },
+      { "title": "每款游戏都有自己的世界", "text": "每款游戏都有独特的风格和声音，工作室只负责署名。" },
+      { "title": "尊重玩家", "text": "价格公道，不设陷阱，尽量少收集数据。" }
+    ],
+    "teamTitle": "团队",
+    "contactTitle": "联系我们",
+    "contactText": "媒体、支持或商务合作：给我们写信，我们会回复。"
+  },
+  "privacy": {
+    "title": "隐私政策",
+    "description": "FarStudio 及其游戏如何处理你的数据。",
+    "toc": "目录",
+    "byGame": "按游戏",
+    "updated": "最后更新",
+    "prevails": "本文为译文；如与英文版本不一致，以英文版本为准。"
+  },
+  "notFound": { "title": "这个页面在海上迷路了。", "text": "链接可能已过期或输入有误。请返回港口。" }
+}

@@ -24,7 +24,7 @@ Una URL por juego, corta y estable: el slug del juego no cambia nunca, porque ir
 - **Selector de idioma** en la cabecera, que lleva a la misma página en el otro idioma (no a la portada).
 - **Para Google:** cada página declara sus versiones en los demás idiomas (`hreflang`), con `en` como `x-default`.
 - **Textos:** un archivo de textos por idioma para las partes comunes, y el contenido de cada juego traducido en su propio archivo de datos. Si falta una traducción, se muestra en inglés.
-- **Tipografía:** Outfit no tiene caracteres chinos, japoneses ni coreanos. En esos idiomas el texto usa Noto Sans SC / JP / KR (u otra equivalente), y Outfit se queda para los títulos en alfabeto latino y el logo.
+- **Tipografía:** Outfit no tiene caracteres chinos, japoneses ni coreanos. En esos idiomas el texto usa la fuente del sistema (PingFang, Hiragino, Noto Sans CJK, Microsoft YaHei, Yu Gothic), sin descargar nada, y Outfit se queda para el alfabeto latino.
 
 ## Privacidad `/<lang>/privacy/`
 
@@ -70,9 +70,9 @@ Cada juego se describe en un único archivo de datos (nombre, slug, frase, enlac
 3. **Cómo trabajamos / lo que nos importa:** tres ideas cortas.
 4. **Contacto:** email del estudio (prensa, soporte, negocios).
 
-## Cómo lo construiría
+## Cómo está construida
 
-Un sitio estático (por ejemplo Astro), publicado en Cloudflare Pages, que ya usáis para la build web de Crime Sudoku. Sin servidor ni base de datos: rápido, barato y fácil de mantener. Astro trae rutas por idioma de serie, y los juegos y textos van como archivos de datos, como arriba.
+Un sitio estático sin dependencias: `build.mjs` genera HTML plano a partir de archivos de datos (un JSON por juego y por idioma). Sin framework ni JavaScript en las páginas, para que sea lo más ligero posible. Se publica en Cloudflare Pages, que ya se usa para la build web de Crime Sudoku. Ver [README.md](README.md).
 
 ## Distribución elegida (wireframes)
 
@@ -102,7 +102,7 @@ La web es la noche y el ámbar es la luz del faro.
 | Ámbar | `#F5A623` | Solo el botón principal, números de los puntos fuertes, antetítulos y el brillo detrás del destacado |
 
 - **Logo:** horizontal `color-on-dark` en la cabecera; símbolo `color-on-dark` en franja, pie y firma.
-- **Tipografía:** Outfit; títulos en seminegrita (600), interletraje ligeramente cerrado. Noto Sans SC/JP/KR para chino, japonés y coreano.
+- **Tipografía:** Outfit; títulos en seminegrita (600), interletraje ligeramente cerrado. Fuente del sistema para chino, japonés y coreano.
 - **Formas:** esquinas suaves (botones 10 px, tarjetas 16 px, imágenes 12 px), sin bordes en tarjetas.
 - **Botones:** principal ámbar con texto negro; secundario con borde gris y texto blanco.
 - **Hero:** arte del juego a sangre, con un brillo ámbar suave y el texto en una caja translúcida.
