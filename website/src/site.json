@@ -1,8 +1,8 @@
 {
-  "domain": "https://farstudio.com",
+  "domain": "https://farstudio.dev",
   "languages": ["en", "es", "zh-hans", "ja"],
   "defaultLanguage": "en",
-  "email": "hello@farstudio.com",
+  "email": "hello@farstudio.dev",
   "youtube": "",
   "privacyUpdated": "2026-10-31",
   "team": []
