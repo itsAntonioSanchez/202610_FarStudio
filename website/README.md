@@ -1,4 +1,4 @@
-# FarStudio website
+# FarStudios website
 
 La web del estudio: portada, una página por juego, About y Privacy, en inglés, español, chino simplificado y japonés. Estilo "Faro nocturno". La estructura y las decisiones de diseño están en [ESTRUCTURA.md](ESTRUCTURA.md).
 

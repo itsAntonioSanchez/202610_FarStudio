@@ -1,8 +1,8 @@
 {
-  "name": "farstudio-website",
+  "name": "farstudios-website",
   "private": true,
   "type": "module",
-  "description": "FarStudio website. Static, no dependencies.",
+  "description": "FarStudios website. Static, no dependencies.",
   "scripts": {
     "build": "node build.mjs",
     "preview": "node build.mjs && python3 -m http.server 4321 --directory dist"

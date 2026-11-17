@@ -1,4 +1,4 @@
-# Estructura de la web de FarStudio (propuesta)
+# Estructura de la web de FarStudios (propuesta)
 
 Cuatro tipos de página: la portada, una página por juego, "About us" y privacidad. Todo en varios idiomas.
 
@@ -37,7 +37,7 @@ Una URL por juego, corta y estable: el slug del juego no cambia nunca, porque ir
 ## Partes comunes a todas las páginas
 
 - **Cabecera:** logo horizontal `color-on-dark` a la izquierda (enlace a la portada), y a la derecha "Games", "About" y el selector de idioma.
-- **Pie:** símbolo pequeño, enlaces a YouTube y tiendas, "© FarStudio", enlace discreto a privacidad.
+- **Pie:** símbolo pequeño, enlaces a YouTube y tiendas, "© FarStudios", enlace discreto a privacidad.
 - **Estilo:** el de la marca. Fondo negro `#111111`, texto blanco, ámbar `#F5A623` solo como acento (el faro, botones), tipografía Outfit.
 - **Favicons e imagen para compartir:** los de `branding/png/favicon/` y `branding/png/banners/link-preview-1200x630.png`.
 
@@ -58,14 +58,14 @@ La misma plantilla para todos, pero cada página luce la identidad del juego (su
 3. **Qué es:** 3 o 4 puntos fuertes con una captura cada uno.
 4. **Galería de capturas.**
 5. **Datos:** plataformas, fecha de salida, idiomas, precio o "gratis".
-6. **Firma:** "Un juego de FarStudio" con el símbolo, y enlaces a otros juegos.
+6. **Firma:** "Un juego de FarStudios" con el símbolo, y enlaces a otros juegos.
 7. **Soporte y privacidad:** enlace a su sección de la política de privacidad y un contacto de soporte (las tiendas piden ambas URL por app).
 
 Cada juego se describe en un único archivo de datos (nombre, slug, frase, enlaces de tienda, tráiler, capturas, colores). Añadir un juego es añadir ese archivo y sus imágenes: la portada y la página salen solas.
 
 ## About us `/<lang>/about/`
 
-1. **Quiénes somos:** qué es FarStudio y por qué hacemos juegos (el faro: algo que se ve desde lejos).
+1. **Quiénes somos:** qué es FarStudios y por qué hacemos juegos (el faro: algo que se ve desde lejos).
 2. **El equipo:** foto o avatar, nombre y rol de cada persona.
 3. **Cómo trabajamos / lo que nos importa:** tres ideas cortas.
 4. **Contacto:** email del estudio (prensa, soporte, negocios).

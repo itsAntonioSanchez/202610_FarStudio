@@ -2,7 +2,7 @@
 
 <p align="center"><img src="../../docs/readme/ignite.gif" alt="The lighthouse switching on" width="480"></p>
 
-Everything needed to rebuild the FarStudio "ignite" animation in a game engine, an app or a video tool. The finished reference is the SVG in `svg/animated/` (for example `farstudio-logo-vertical-color-on-dark-ignite.svg`): open it in a browser to see what the result must look like.
+Everything needed to rebuild the FarStudios "ignite" animation in a game engine, an app or a video tool. The finished reference is the SVG in `svg/animated/` (for example `farstudios-logo-vertical-color-on-dark-ignite.svg`): open it in a browser to see what the result must look like.
 
 It lasts **1.5 s** and plays **once**: 1.15 s of movement, then the lit logo holds still. The lamp gives three quick flashes, each brighter than the last, stays dark for a moment, then comes on while the beams grow out of the lantern. A soft glow blooms behind the lighthouse near the end and fades. The logo then stays lit, identical to the static logo.
 
@@ -107,7 +107,7 @@ The curves are CSS cubic-beziers. Evaluate them exactly (sample below), or use t
 Use the SVG as it is, no code needed:
 
 ```html
-<img src="farstudio-logo-vertical-color-on-dark-ignite.svg" alt="FarStudio" width="420">
+<img src="farstudios-logo-vertical-color-on-dark-ignite.svg" alt="FarStudios" width="420">
 ```
 
 It plays when the image loads. To play it again, load the image again (for example, set its `src` once more with `?replay=2` added).
@@ -192,7 +192,7 @@ The timing lives in `tools/ignite_timeline.py`. After a change there, from the `
 ```
 python3 tools/animate.py svg svg/animated                  # the animated SVGs
 python3 tools/ignite_kit.py svg/animated animation/ignite  # this kit: layers and JSON (needs Playwright + Chromium)
-python3 tools/ignite_gif.py svg/animated/farstudio-logo-vertical-color-on-dark-ignite.svg docs/readme/ignite.gif  # the GIF
+python3 tools/ignite_gif.py svg/animated/farstudios-logo-vertical-color-on-dark-ignite.svg docs/readme/ignite.gif  # the GIF
 ```
 
 Then update the tables above.

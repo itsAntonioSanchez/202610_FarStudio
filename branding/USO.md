@@ -1,6 +1,6 @@
-# FarStudio · Paquete de marca
+# FarStudios · Paquete de marca
 
-<p align="center"><img src="docs/readme/hero.png" alt="Logo de FarStudio" width="100%"></p>
+<p align="center"><img src="docs/readme/hero.png" alt="Logo de FarStudios" width="100%"></p>
 
 Guía rápida de qué archivo usar en cada sitio. La misma guía en inglés está en el [README](README.md).
 
@@ -21,7 +21,7 @@ png/        Los mismos archivos en PNG, de 3840 px hacia abajo.
 fonts/      Outfit (licencia OFL, se puede distribuir con el juego).
 ```
 
-Cada PNG lleva su tamaño en el nombre: `farstudio-logo-horizontal-color-on-dark-1024x283.png` mide 1024 × 283 px. El número que se escoge es el lado más largo.
+Cada PNG lleva su tamaño en el nombre: `farstudios-logo-horizontal-color-on-dark-1024x266.png` mide 1024 × 266 px. El número que se escoge es el lado más largo.
 
 ## Variantes de color
 
@@ -59,14 +59,14 @@ Fondo transparente en todas, salvo `app-icon`, `avatar` y `banners`, que ya llev
 | **Google Play**, icono | `app-icon/square/…-512x512.png` |
 | **Google Play**, gráfico destacado | `banners/store-feature-graphic-1024x500.png` |
 | **Steam**, avatar de desarrollador | `avatar/square/…-256x256.png` o `…-512x512.png` |
-| **Steam**, cabecera de la página de desarrollador | `logo-horizontal/color-on-dark/…-1920x531.png` sobre negro, o `banners/social-header-1500x500.png` |
+| **Steam**, cabecera de la página de desarrollador | `logo-horizontal/color-on-dark/…-1920x499.png` sobre negro, o `banners/social-header-1500x500.png` |
 | **YouTube**, foto del canal | `avatar/square/…-800x800.png` |
 | **YouTube**, banner | `banners/youtube-banner-2560x1440.png` (el logo cae dentro de la zona segura) |
 | **Redes** (X, Instagram, TikTok, LinkedIn), foto de perfil | `avatar/square/…-400x400.png` u `…-800x800.png` |
 | **Redes**, cabecera | `banners/social-header-1500x500.png` |
 | **Gmail / Google**, foto de la cuenta | `avatar/square/…-800x800.png` |
-| **Web**, cabecera | `svg/farstudio-logo-horizontal-color-on-light.svg` (o `-on-dark` si la cabecera es oscura) |
-| **Web**, pie | `svg/farstudio-logo-horizontal-color-on-dark.svg` o `mono-white` |
+| **Web**, cabecera | `svg/farstudios-logo-horizontal-color-on-light.svg` (o `-on-dark` si la cabecera es oscura) |
+| **Web**, pie | `svg/farstudios-logo-horizontal-color-on-dark.svg` o `mono-white` |
 | **Web**, favicon | `favicon/favicon.ico` + `favicon-32x32.png` + `favicon-16x16.png` + `apple-touch-icon-180x180.png` |
 | **Web**, icono de app instalable | `favicon/favicon-192x192.png` y `favicon-512x512.png` |
 | **Web**, vista previa al compartir un enlace | `banners/link-preview-1200x630.png` |
@@ -81,11 +81,11 @@ Si un sitio pide un tamaño que no está, escoge el siguiente más grande y deja
 
 ## Logo animado
 
-<p align="center"><img src="docs/readme/ignite.gif" alt="El faro de FarStudio encendiéndose: tres destellos rápidos, un momento a oscuras y la luz sube y se queda encendida" width="480"></p>
+<p align="center"><img src="docs/readme/ignite.gif" alt="El faro de FarStudios encendiéndose: tres destellos rápidos, un momento a oscuras y la luz sube y se queda encendida" width="480"></p>
 
 En `svg/animated/` está el faro encendiéndose (`ignite`), para webs, arranques de app, splash e intros. Tres destellos rápidos, cada uno más fuerte que el anterior, un momento a oscuras, y la luz sube mientras se abren los haces. Dura **1,5 s** contando el logo ya quieto y encendido al final (1,15 s de movimiento), se reproduce **una vez** al aparecer y se queda en el logo estático.
 
-Está en `symbol`, `logo-vertical` y `logo-horizontal`, en `color-on-dark` (preferida) y `color-on-light`; por ejemplo, `svg/animated/farstudio-logo-vertical-color-on-dark-ignite.svg`. Es SVG + CSS puro: se reproduce dentro de una etiqueta `<img>`, sin JavaScript, y se queda quieto para quien tenga activado reducir el movimiento. Solo se mueve la luz: el faro y el nombre no cambian. Un logo animado por pantalla como mucho; donde el logo va pequeño o junto a texto, el estático.
+Está en `symbol`, `logo-vertical` y `logo-horizontal`, en `color-on-dark` (preferida) y `color-on-light`; por ejemplo, `svg/animated/farstudios-logo-vertical-color-on-dark-ignite.svg`. Es SVG + CSS puro: se reproduce dentro de una etiqueta `<img>`, sin JavaScript, y se queda quieto para quien tenga activado reducir el movimiento. Solo se mueve la luz: el faro y el nombre no cambian. Un logo animado por pantalla como mucho; donde el logo va pequeño o junto a texto, el estático.
 
 Para montarlo en un motor de juego u otra herramienta, en [`animation/ignite/`](animation/ignite/README.md) están el logo separado en capas, la línea de tiempo en JSON y los pasos.
 
@@ -114,6 +114,6 @@ Para montarlo en un motor de juego u otra herramienta, en [`animation/ignite/`](
 
 ## Tipografía
 
-<img src="docs/readme/typeface.png" alt="FARSTUDIO en Outfit">
+<img src="docs/readme/typeface.png" alt="FARSTUDIOS en Outfit">
 
-Outfit (Google Fonts, licencia OFL). En el nombre: **FAR** en peso 600 y STUDIO en peso 300, todo en mayúsculas y con un espaciado entre letras de 0,22 em. Para textos de apoyo, Outfit 400.
+Outfit (Google Fonts, licencia OFL). En el nombre: **FAR** en peso 600 y STUDIOS en peso 300, todo en mayúsculas y con un espaciado entre letras de 0,22 em. Para textos de apoyo, Outfit 400.

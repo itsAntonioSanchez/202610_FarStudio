@@ -22,8 +22,8 @@
     "privacy": "プライバシー"
   },
   "home": {
-    "title": "FarStudio · インディーゲーム",
-    "description": "FarStudio はスマホと PC 向けのゲームを作るインディースタジオです。",
+    "title": "FarStudios · インディーゲーム",
+    "description": "FarStudios はスマホと PC 向けのゲームを作るインディースタジオです。",
     "newGame": "新作",
     "seeGame": "ゲームを見る",
     "ourGames": "ゲーム一覧",
@@ -45,16 +45,16 @@
     "features": "特徴",
     "playTrailer": "トレーラーを再生",
     "trailerSoon": "トレーラーは近日公開",
-    "signature": "FarStudio のゲーム",
+    "signature": "FarStudios のゲーム",
     "moreGames": "ほかのゲーム",
     "support": "サポート"
   },
   "about": {
     "title": "スタジオについて",
-    "description": "FarStudio について、そしてお問い合わせ方法。",
+    "description": "FarStudios について、そしてお問い合わせ方法。",
     "eyebrow": "スタジオについて",
     "statement": "遠くからでも見えるゲームを作っています。",
-    "intro": "FarStudio は小さな独立系スタジオです。灯台のように、見つけやすく、すぐに遊べて、また戻ってきたくなるゲームを目指しています。",
+    "intro": "FarStudios は小さな独立系スタジオです。灯台のように、見つけやすく、すぐに遊べて、また戻ってきたくなるゲームを目指しています。",
     "valuesTitle": "大切にしていること",
     "values": [
       {
@@ -76,7 +76,7 @@
   },
   "privacy": {
     "title": "プライバシーポリシー",
-    "description": "FarStudio とそのゲームにおけるデータの取り扱いについて。",
+    "description": "FarStudios とそのゲームにおけるデータの取り扱いについて。",
     "toc": "目次",
     "byGame": "ゲーム別",
     "updated": "最終更新日",
@@ -84,7 +84,7 @@
   },
   "support": {
     "title": "サポート",
-    "byStudio": "FarStudio のゲーム",
+    "byStudio": "FarStudios のゲーム",
     "contactTitle": "お問い合わせ",
     "contactText": "ご質問、不具合、ご意見などはメールでお送りください。できるだけ早くお返事します。",
     "faqTitle": "よくある質問",

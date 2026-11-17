@@ -53,19 +53,19 @@ PAGES = {}
 
 # Pieces: which logo for which space
 PAGES["pieces"] = f"""<div class="sheet"><div class="grid" style="grid-template-columns: 1.15fr 1.6fr;">
-{card(img(svg("farstudio-logo-vertical-color-on-light.svg"), h=190), "Vertical · primary", "Credits, splash, posters, press kit", h=250)}
-{card(img(svg("farstudio-logo-horizontal-color-on-light.svg"), w=380), "Horizontal · secondary", "Headers, footers, signatures, watermarks", h=250)}
+{card(img(svg("farstudios-logo-vertical-color-on-light.svg"), h=190), "Vertical · primary", "Credits, splash, posters, press kit", h=250)}
+{card(img(svg("farstudios-logo-horizontal-color-on-light.svg"), w=380), "Horizontal · secondary", "Headers, footers, signatures, watermarks", h=250)}
 </div><div class="grid" style="grid-template-columns: 1fr 1.6fr; margin-top:16px">
-{card(img(svg("farstudio-symbol-color-on-light.svg"), h=110), "Symbol", "Square or under 32 px: icons, avatars, favicon", h=160)}
-{card(img(svg("farstudio-wordmark-black.svg"), w=330), "Wordmark", "Only with the lighthouse already nearby", h=160)}
+{card(img(svg("farstudios-symbol-color-on-light.svg"), h=110), "Symbol", "Square or under 32 px: icons, avatars, favicon", h=160)}
+{card(img(svg("farstudios-wordmark-black.svg"), w=330), "Wordmark", "Only with the lighthouse already nearby", h=160)}
 </div></div>"""
 
 # Color variants, each on its background
 PAGES["variants"] = f"""<div class="sheet"><div class="grid" style="grid-template-columns: 1fr 1fr;">
-{card(img(svg("farstudio-logo-horizontal-color-on-dark.svg"), w=330), "color-on-dark · preferred", "On black or dark backgrounds", bg=INK, h=170)}
-{card(img(svg("farstudio-logo-horizontal-color-on-light.svg"), w=330), "color-on-light", "On white or light backgrounds", h=170)}
-{card(img(svg("farstudio-logo-horizontal-mono-black.svg"), w=330), "mono-black", "One-color print, stamps, black and white", bg=LIGHT, h=170)}
-{card(img(svg("farstudio-logo-horizontal-mono-white.svg"), w=330), "mono-white", "Over photos or color where amber can't read", bg="linear-gradient(135deg,#3E5C76,#7A6C8F)", h=170)}
+{card(img(svg("farstudios-logo-horizontal-color-on-dark.svg"), w=330), "color-on-dark · preferred", "On black or dark backgrounds", bg=INK, h=170)}
+{card(img(svg("farstudios-logo-horizontal-color-on-light.svg"), w=330), "color-on-light", "On white or light backgrounds", h=170)}
+{card(img(svg("farstudios-logo-horizontal-mono-black.svg"), w=330), "mono-black", "One-color print, stamps, black and white", bg=LIGHT, h=170)}
+{card(img(svg("farstudios-logo-horizontal-mono-white.svg"), w=330), "mono-white", "Over photos or color where amber can't read", bg="linear-gradient(135deg,#3E5C76,#7A6C8F)", h=170)}
 </div></div>"""
 
 # Icons and avatars
@@ -73,9 +73,9 @@ fav = "".join(
     f'<div style="text-align:center">{img(png(f"png/favicon/favicon-{s}x{s}.png"), w=s, h=s, extra="margin:0 auto 8px;image-rendering:pixelated")}'
     f'<span style="font-size:12px;color:{GRAY}">{s} px</span></div>' for s in (48, 32, 16))
 PAGES["icons"] = f"""<div class="sheet"><div class="grid" style="grid-template-columns: repeat(4, 1fr);">
-{card(img(svg("farstudio-app-icon.svg"), w=150), "App icon · square", "Stores (they round it)", h=200)}
-{card(img(svg("farstudio-app-icon-rounded.svg"), w=150), "App icon · rounded", "Web, docs, mockups", h=200)}
-{card(img(svg("farstudio-avatar-circle.svg"), w=150), "Avatar", "YouTube, Steam, social", h=200)}
+{card(img(svg("farstudios-app-icon.svg"), w=150), "App icon · square", "Stores (they round it)", h=200)}
+{card(img(svg("farstudios-app-icon-rounded.svg"), w=150), "App icon · rounded", "Web, docs, mockups", h=200)}
+{card(img(svg("farstudios-avatar-circle.svg"), w=150), "Avatar", "YouTube, Steam, social", h=200)}
 {card(f'<div style="display:flex;gap:22px;align-items:flex-end">{fav}</div>', "Favicon", "Real size, still readable", h=200)}
 </div></div>"""
 
@@ -92,13 +92,13 @@ PAGES["colors"] = '<div class="sheet"><div class="grid" style="grid-template-col
 
 # Clear space and minimum sizes
 PAGES["rules"] = f"""<div class="sheet"><div class="grid" style="grid-template-columns: 1.5fr 1fr;">
-{card(f'<div style="position:relative;outline:1.5px dashed {AMBER};outline-offset:0">{img(svg("farstudio-logo-horizontal-color-on-light.svg"), w=360)}'
+{card(f'<div style="position:relative;outline:1.5px dashed {AMBER};outline-offset:0">{img(svg("farstudios-logo-horizontal-color-on-light.svg"), w=360)}'
       f'<span style="position:absolute;bottom:-26px;left:0;font-size:12px;color:{GRAY}">dashed line = file edge · X (cap height of the name) on every side</span></div>',
       "Clear space", "Built into every file: never crop it", h=290)}
 {card(f'<div style="display:flex;flex-direction:column;gap:14px;align-items:flex-start">'
-      f'<div style="display:flex;align-items:center;gap:12px">{img(svg("farstudio-logo-vertical-color-on-light.svg"), w=120)}<span style="font-size:13px">vertical · 120 px</span></div>'
-      f'<div style="display:flex;align-items:center;gap:12px">{img(svg("farstudio-logo-horizontal-color-on-light.svg"), w=140)}<span style="font-size:13px">horizontal · 140 px</span></div>'
-      f'<div style="display:flex;align-items:center;gap:12px">{img(svg("farstudio-symbol-color-on-light.svg"), w=16)}<span style="font-size:13px">symbol · 16 px</span></div></div>',
+      f'<div style="display:flex;align-items:center;gap:12px">{img(svg("farstudios-logo-vertical-color-on-light.svg"), w=120)}<span style="font-size:13px">vertical · 120 px</span></div>'
+      f'<div style="display:flex;align-items:center;gap:12px">{img(svg("farstudios-logo-horizontal-color-on-light.svg"), w=140)}<span style="font-size:13px">horizontal · 140 px</span></div>'
+      f'<div style="display:flex;align-items:center;gap:12px">{img(svg("farstudios-symbol-color-on-light.svg"), w=16)}<span style="font-size:13px">symbol · 16 px</span></div></div>',
       "Minimum sizes", "Shown at their real size", h=290)}
 </div></div>"""
 

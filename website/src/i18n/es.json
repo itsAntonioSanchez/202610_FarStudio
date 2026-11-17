@@ -22,8 +22,8 @@
     "privacy": "Privacidad"
   },
   "home": {
-    "title": "FarStudio · Juegos indie",
-    "description": "FarStudio es un estudio indie que hace juegos para móvil y PC.",
+    "title": "FarStudios · Juegos indie",
+    "description": "FarStudios es un estudio indie que hace juegos para móvil y PC.",
     "newGame": "Nuevo juego",
     "seeGame": "Ver el juego",
     "ourGames": "Nuestros juegos",
@@ -45,16 +45,16 @@
     "features": "Características",
     "playTrailer": "Ver tráiler",
     "trailerSoon": "Tráiler próximamente",
-    "signature": "Un juego de FarStudio",
+    "signature": "Un juego de FarStudios",
     "moreGames": "Más juegos",
     "support": "Soporte"
   },
   "about": {
     "title": "Nosotros",
-    "description": "Quiénes somos y cómo contactar con FarStudio.",
+    "description": "Quiénes somos y cómo contactar con FarStudios.",
     "eyebrow": "Nosotros",
     "statement": "Hacemos juegos que se ven desde lejos.",
-    "intro": "FarStudio es un estudio independiente pequeño. Como un faro, queremos que nuestros juegos se vean fácilmente, se entiendan al momento y den ganas de volver.",
+    "intro": "FarStudios es un estudio independiente pequeño. Como un faro, queremos que nuestros juegos se vean fácilmente, se entiendan al momento y den ganas de volver.",
     "valuesTitle": "Lo que nos importa",
     "values": [
       {
@@ -76,7 +76,7 @@
   },
   "privacy": {
     "title": "Política de privacidad",
-    "description": "Cómo tratan tus datos FarStudio y sus juegos.",
+    "description": "Cómo tratan tus datos FarStudios y sus juegos.",
     "toc": "Contenido",
     "byGame": "Por juego",
     "updated": "Última actualización",
@@ -84,7 +84,7 @@
   },
   "support": {
     "title": "Soporte",
-    "byStudio": "Un juego de FarStudio",
+    "byStudio": "Un juego de FarStudios",
     "contactTitle": "Escríbenos",
     "contactText": "Dudas, problemas o ideas: escríbenos y te responderemos lo antes posible.",
     "faqTitle": "Preguntas frecuentes",

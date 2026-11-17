@@ -1,5 +1,5 @@
 {
-  "name": "FarStudio ignite",
+  "name": "FarStudios ignite",
   "duration_ms": 1500,
   "plays": "once; after the last key every value holds, so the logo stays lit",
   "ease": "each key's ease shapes the move to the next key: 'hold' keeps the value and jumps at the next key; 'bezier' eases with the CSS cubic-bezier in 'bezier' (x1, y1, x2, y2)",
@@ -215,54 +215,54 @@
     "logo-vertical": {
       "size_px": [
         2048,
-        1422
+        1375
       ],
       "pivots": {
         "lamp": {
           "x": 0.5,
-          "y_from_top": 0.2127,
-          "y_from_bottom": 0.7873
+          "y_from_top": 0.2108,
+          "y_from_bottom": 0.7892
         },
         "beam-left": {
-          "x": 0.4616,
-          "y_from_top": 0.1989,
-          "y_from_bottom": 0.8011
+          "x": 0.4613,
+          "y_from_top": 0.1964,
+          "y_from_bottom": 0.8036
         },
         "beam-right": {
-          "x": 0.5384,
-          "y_from_top": 0.1989,
-          "y_from_bottom": 0.8011
+          "x": 0.5387,
+          "y_from_top": 0.1964,
+          "y_from_bottom": 0.8036
         },
         "glow": {
           "x": 0.5,
-          "y_from_top": 0.2127,
-          "y_from_bottom": 0.7873
+          "y_from_top": 0.2108,
+          "y_from_bottom": 0.7892
         }
       }
     },
     "logo-horizontal": {
       "size_px": [
         2048,
-        566
+        532
       ],
       "pivots": {
         "lamp": {
-          "x": 0.1422,
+          "x": 0.1336,
           "y_from_top": 0.3124,
           "y_from_bottom": 0.6876
         },
         "beam-left": {
-          "x": 0.1263,
+          "x": 0.1186,
           "y_from_top": 0.298,
           "y_from_bottom": 0.702
         },
         "beam-right": {
-          "x": 0.1582,
+          "x": 0.1486,
           "y_from_top": 0.298,
           "y_from_bottom": 0.702
         },
         "glow": {
-          "x": 0.1422,
+          "x": 0.1336,
           "y_from_top": 0.3124,
           "y_from_bottom": 0.6876
         }

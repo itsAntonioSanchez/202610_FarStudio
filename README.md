@@ -1,6 +1,6 @@
-# FarStudio
+# FarStudios
 
-Repositorio de FarStudio, el estudio indie detrás de nuestros juegos y apps.
+Repositorio de FarStudios, el estudio indie detrás de nuestros juegos y apps.
 
 | Carpeta | Qué contiene |
 |---|---|
