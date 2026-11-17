@@ -1,4 +1,4 @@
-// Builds the FarStudio website into dist/. No dependencies: run `node build.mjs`.
+// Builds the FarStudios website into dist/. No dependencies: run `node build.mjs`.
 //
 // Content lives in src/: site.json (settings), i18n/<lang>.json (interface text),
 // games/<slug>.json (one file per game), privacy/<lang>.html (the policy).
@@ -74,7 +74,7 @@ function head({ lang, t, title, description, path, noindex = false, image }) {
   <link rel="alternate" hreflang="x-default" href="${abs(url(DEFAULT, path))}">`}
   <meta name="theme-color" content="#111111">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="FarStudio">
+  <meta property="og:site_name" content="FarStudios">
   <meta property="og:title" content="${esc(title)}">
   <meta property="og:description" content="${esc(description)}">
   <meta property="og:url" content="${abs(url(lang, path))}">
@@ -95,7 +95,7 @@ function header(lang, t, path) {
   ).join('');
   return `<a class="skip" href="#main">${esc(t.nav.skip)}</a>
 <header class="nav wrap">
-  <a class="brand" href="${url(lang)}" aria-label="FarStudio, ${esc(t.nav.home)}"><img src="/assets/brand/logo-horizontal.svg" alt="FarStudio" width="145" height="40"></a>
+  <a class="brand" href="${url(lang)}" aria-label="FarStudios, ${esc(t.nav.home)}"><img src="/assets/brand/logo-horizontal.svg" alt="FarStudios" width="154" height="40"></a>
   <nav class="links" aria-label="${esc(t.nav.main)}">
     <a href="${url(lang)}#games">${esc(t.nav.games)}</a>
     <a href="${url(lang, 'about/')}">${esc(t.nav.about)}</a>
@@ -118,7 +118,7 @@ function footer(lang, t, path) {
     <div><h2>${esc(t.footer.studio)}</h2><ul><li><a href="${url(lang, 'about/')}">${esc(t.nav.about)}</a></li>${youtube}<li><a href="${url(lang, 'about/')}#contact">${esc(t.footer.contact)}</a></li></ul></div>
     <div><h2>${esc(t.footer.language)}</h2><ul>${langLinks}</ul></div>
   </div>
-  <div class="wrap fbottom"><span>© ${new Date().getFullYear()} FarStudio</span><a href="${url(lang, 'privacy/')}">${esc(t.footer.privacy)}</a></div>
+  <div class="wrap fbottom"><span>© ${new Date().getFullYear()} FarStudios</span><a href="${url(lang, 'privacy/')}">${esc(t.footer.privacy)}</a></div>
 </footer>`;
 }
 
@@ -221,7 +221,7 @@ function gamePage(lang, g) {
 <div class="dlbar">${firstLive ? storeButton(firstLive, t, true) : `<span class="btn pri is-soon" aria-disabled="true"><span>${esc(t.game.soon)}</span></span>`}</div>`;
   const script = g.trailer ? `<script src="/assets/trailer.js" defer></script>` : '';
   const image = g.art?.share ? gameAsset(g, g.art.share) : undefined;
-  return page({ lang, t, title: `${name} · FarStudio`, description: loc(g.tagline, lang), path, image }, body, script);
+  return page({ lang, t, title: `${name} · FarStudios`, description: loc(g.tagline, lang), path, image }, body, script);
 }
 
 function supportPage(lang, g) {
@@ -250,7 +250,7 @@ function supportPage(lang, g) {
   ${faq ? `<section aria-labelledby="faq-title" class="faqs"><h2 id="faq-title">${esc(s.faqTitle)}</h2>${faq}</section>` : ''}
   <p class="small muted"><a href="${url(lang, 'privacy/')}#${g.slug}">${esc(s.privacyLink)}</a> · <a href="${url(lang, `games/${g.slug}/`)}">${esc(name)}</a></p>
 </div>`;
-  return page({ lang, t, title: `${s.title} · ${name} · FarStudio`, description: `${s.title}: ${name}. ${s.contactText}`, path }, body);
+  return page({ lang, t, title: `${s.title} · ${name} · FarStudios`, description: `${s.title}: ${name}. ${s.contactText}`, path }, body);
 }
 
 function aboutPage(lang) {
@@ -275,7 +275,7 @@ ${team ? `<section class="block wrap" aria-labelledby="team-title"><div class="b
     <a class="btn pri" href="mailto:${esc(site.email)}">${esc(site.email)}</a>
   </div>
 </section>`;
-  return page({ lang, t, title: `${a.title} · FarStudio`, description: a.description, path: 'about/' }, body);
+  return page({ lang, t, title: `${a.title} · FarStudios`, description: a.description, path: 'about/' }, body);
 }
 
 function privacyPage(lang) {
@@ -304,7 +304,7 @@ function privacyPage(lang) {
     ${html.replaceAll('{{EMAIL}}', `<a href="mailto:${esc(site.email)}">${esc(site.email)}</a>`)}
   </article>
 </div>`;
-  return page({ lang, t, title: `${p.title} · FarStudio`, description: p.description, path: 'privacy/', noindex: true }, body);
+  return page({ lang, t, title: `${p.title} · FarStudios`, description: p.description, path: 'privacy/', noindex: true }, body);
 }
 
 // Language-less addresses (/, /privacy/, /about/, /games/<slug>/): send visitors to the same page
@@ -318,7 +318,7 @@ function rootPage(path = '') {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FarStudio</title>
+  <title>FarStudios</title>
   ${path ? '<meta name="robots" content="noindex">' : `<link rel="canonical" href="${abs(`/${DEFAULT}/`)}">
   ${alternates}
   <link rel="alternate" hreflang="x-default" href="${abs(`/${DEFAULT}/`)}">`}
@@ -345,8 +345,8 @@ function rootPage(path = '') {
 
 function notFound() {
   const t = T[DEFAULT];
-  const body = `<section class="wrap manifesto"><p class="eyebrow">404</p><h1>${esc(t.notFound.title)}</h1><p class="muted">${esc(t.notFound.text)}</p><p><a class="btn pri" href="/">FarStudio</a></p></section>`;
-  return page({ lang: DEFAULT, t, title: `404 · FarStudio`, description: t.notFound.title, path: '', noindex: true }, body);
+  const body = `<section class="wrap manifesto"><p class="eyebrow">404</p><h1>${esc(t.notFound.title)}</h1><p class="muted">${esc(t.notFound.text)}</p><p><a class="btn pri" href="/">FarStudios</a></p></section>`;
+  return page({ lang: DEFAULT, t, title: `404 · FarStudios`, description: t.notFound.title, path: '', noindex: true }, body);
 }
 
 function sitemap() {
@@ -372,8 +372,8 @@ mkdirSync(OUT, { recursive: true });
 // Brand files: refreshed from ../branding when it exists (the full repository), so the site
 // always uses the current logos; public/assets/brand keeps a copy so website/ also builds on its own.
 const brand = {
-  'svg/farstudio-logo-horizontal-color-on-dark.svg': 'assets/brand/logo-horizontal.svg',
-  'svg/farstudio-symbol-color-on-dark.svg': 'assets/brand/symbol.svg',
+  'svg/farstudios-logo-horizontal-color-on-dark.svg': 'assets/brand/logo-horizontal.svg',
+  'svg/farstudios-symbol-color-on-dark.svg': 'assets/brand/symbol.svg',
   'png/favicon/favicon-32x32.png': 'assets/brand/favicon-32x32.png',
   'png/favicon/favicon-192x192.png': 'assets/brand/favicon-192x192.png',
   'png/favicon/apple-touch-icon-180x180.png': 'assets/brand/apple-touch-icon-180x180.png',

@@ -22,8 +22,8 @@
     "privacy": "Privacy"
   },
   "home": {
-    "title": "FarStudio · Indie games",
-    "description": "FarStudio is an indie studio making games for phones and PC.",
+    "title": "FarStudios · Indie games",
+    "description": "FarStudios is an indie studio making games for phones and PC.",
     "newGame": "New game",
     "seeGame": "See the game",
     "ourGames": "Our games",
@@ -45,16 +45,16 @@
     "features": "Features",
     "playTrailer": "Play trailer",
     "trailerSoon": "Trailer coming soon",
-    "signature": "A FarStudio game",
+    "signature": "A FarStudios game",
     "moreGames": "More games",
     "support": "Support"
   },
   "about": {
     "title": "About us",
-    "description": "Who we are and how to reach FarStudio.",
+    "description": "Who we are and how to reach FarStudios.",
     "eyebrow": "About us",
     "statement": "We make games you can see from far away.",
-    "intro": "FarStudio is a small independent studio. Like a lighthouse, we want our games to be easy to spot, easy to pick up and worth coming back to.",
+    "intro": "FarStudios is a small independent studio. Like a lighthouse, we want our games to be easy to spot, easy to pick up and worth coming back to.",
     "valuesTitle": "What we care about",
     "values": [
       {
@@ -76,7 +76,7 @@
   },
   "privacy": {
     "title": "Privacy policy",
-    "description": "How FarStudio and its games handle your data.",
+    "description": "How FarStudios and its games handle your data.",
     "toc": "Contents",
     "byGame": "By game",
     "updated": "Last updated",
@@ -84,7 +84,7 @@
   },
   "support": {
     "title": "Support",
-    "byStudio": "A FarStudio game",
+    "byStudio": "A FarStudios game",
     "contactTitle": "Contact us",
     "contactText": "Questions, problems or ideas: write to us and we will answer as soon as we can.",
     "faqTitle": "Frequently asked questions",

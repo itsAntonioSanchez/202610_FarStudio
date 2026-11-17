@@ -1,4 +1,4 @@
-"""Build the FarStudio vector masters: text converted to outlines, no font needed."""
+"""Build the FarStudios vector masters: text converted to outlines, no font needed."""
 import os, sys
 from fontTools.ttLib import TTFont
 from fontTools.varLib.instancer import instantiateVariableFont
@@ -89,7 +89,7 @@ VARIANTS = {
 }
 
 F = 100.0  # wordmark size unit for masters
-word_d, word_w, cap = text_paths([("FAR", 600), ("STUDIO", 300)], F)
+word_d, word_w, cap = text_paths([("FAR", 600), ("STUDIOS", 300)], F)
 X = cap  # clear space unit: the cap height of the wordmark
 
 for vname, (col, mode) in VARIANTS.items():
@@ -101,12 +101,12 @@ for vname, (col, mode) in VARIANTS.items():
     m = 0.08 * max(sw, sh)
     W, H = sw + 2 * m, sh + 2 * m
     body = f'<g transform="translate({m - x0:.3f} {m - y0:.3f})">{sym}</g>'
-    write(f"farstudio-symbol-{vname}.svg", svg_doc(W, H, body, defs))
+    write(f"farstudios-symbol-{vname}.svg", svg_doc(W, H, body, defs))
 
     # --- Wordmark alone, with clear space X
     word = f'<path d="{word_d}" fill="{col}"/>'
     W, H = word_w + 2 * X, cap + 2 * X
-    write(f"farstudio-wordmark-{'black' if col == INK else 'white'}.svg",
+    write(f"farstudios-wordmark-{'black' if col == INK else 'white'}.svg",
           svg_doc(W, H, f'<g transform="translate({X:.3f} {X + cap:.3f})">{word}</g>'))
 
     # --- Horizontal lockup: [symbol] | NAME
@@ -126,10 +126,10 @@ for vname, (col, mode) in VARIANTS.items():
     sep = f'<rect x="{sep_x:.3f}" y="{cy - sep_h / 2:.3f}" width="{sep_w:.3f}" height="{sep_h:.3f}" fill="{col}"/>'
     tx = sep_x + sep_w + gap2
     word_g = f'<g transform="translate({tx:.3f} {cy + cap / 2:.3f})">{word}</g>'
-    write(f"farstudio-logo-horizontal-{vname}.svg", svg_doc(W, H, sym_g + sep + word_g, defs))
+    write(f"farstudios-logo-horizontal-{vname}.svg", svg_doc(W, H, sym_g + sep + word_g, defs))
 
     # --- Vertical lockup: symbol over NAME
-    S = 4.2 * F
+    S = 4.6 * F                     # symbol height: keeps the lighthouse at ~48 % of the name width
     k = S / 100.0
     sym_w, sym_h = (x1 - x0) * k, (y1 - y0) * k
     gap = 0.6 * F
@@ -140,11 +140,11 @@ for vname, (col, mode) in VARIANTS.items():
     sym_g = f'<g transform="translate({sx - x0 * k:.3f} {X - y0 * k:.3f}) scale({k:.5f})">{sym}</g>'
     wx = X + (content_w - word_w) / 2
     word_g = f'<g transform="translate({wx:.3f} {X + sym_h + gap + cap:.3f})">{word}</g>'
-    write(f"farstudio-logo-vertical-{vname}.svg", svg_doc(W, H, sym_g + word_g, defs))
+    write(f"farstudios-logo-vertical-{vname}.svg", svg_doc(W, H, sym_g + word_g, defs))
 
 # --- App icon and avatar: ink background, white structure, amber light
 defs, sym = symbol(PAPER, "gradient", "icon")
-for name, scale, shape in (("farstudio-app-icon", 0.74, "square"), ("farstudio-avatar", 0.62, "square")):
+for name, scale, shape in (("farstudios-app-icon", 0.74, "square"), ("farstudios-avatar", 0.62, "square")):
     W = H = 1024
     k = W * scale / 100.0
     x0, y0, x1, y1 = SYM_BOX
@@ -158,13 +158,13 @@ W = 1024
 k = W * 0.74 / 100.0
 ox = (W - 84 * k) / 2 - 8 * k
 oy = (W - 80 * k) / 2 - 13 * k
-write("farstudio-app-icon-rounded.svg", svg_doc(W, W,
+write("farstudios-app-icon-rounded.svg", svg_doc(W, W,
       f'<rect width="{W}" height="{W}" rx="{W * 0.2237:.2f}" fill="{INK}"/>'
       f'<g transform="translate({ox:.3f} {oy:.3f}) scale({k:.5f})">{sym}</g>', defs))
 k = W * 0.62 / 100.0
 ox = (W - 84 * k) / 2 - 8 * k
 oy = (W - 80 * k) / 2 - 13 * k
-write("farstudio-avatar-circle.svg", svg_doc(W, W,
+write("farstudios-avatar-circle.svg", svg_doc(W, W,
       f'<circle cx="{W / 2}" cy="{W / 2}" r="{W / 2}" fill="{INK}"/>'
       f'<g transform="translate({ox:.3f} {oy:.3f}) scale({k:.5f})">{sym}</g>', defs))
 

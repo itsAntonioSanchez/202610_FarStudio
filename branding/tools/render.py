@@ -1,4 +1,4 @@
-"""Render the FarStudio masters to PNG at every size, with headless Chromium."""
+"""Render the FarStudios masters to PNG at every size, with headless Chromium."""
 import os, re, sys, base64
 from playwright.sync_api import sync_playwright
 
@@ -50,8 +50,8 @@ with sync_playwright() as p:
         base = fn[:-4]
         path = os.path.join(SVG, fn)
         vw, vh = svg_size(path)
-        kind = next(k for k in SIZES if base.startswith("farstudio-" + k))
-        folder = os.path.join(OUT, kind, base.replace("farstudio-" + kind, "").strip("-") or "square")
+        kind = next(k for k in SIZES if base.startswith("farstudios-" + k))
+        folder = os.path.join(OUT, kind, base.replace("farstudios-" + kind, "").strip("-") or "square")
         for s in SIZES[kind]:
             # s is the longest side
             if vw >= vh:
@@ -62,8 +62,8 @@ with sync_playwright() as p:
             count += 1
 
     # Favicons and touch icon, from the rounded app icon
-    icon = os.path.join(SVG, "farstudio-app-icon-rounded.svg")
-    sq = os.path.join(SVG, "farstudio-app-icon.svg")
+    icon = os.path.join(SVG, "farstudios-app-icon-rounded.svg")
+    sq = os.path.join(SVG, "farstudios-app-icon.svg")
     fav = os.path.join(OUT, "favicon")
     for s in (16, 32, 48, 192, 512):
         shot(page, place(icon, s, s), s, s, os.path.join(fav, f"favicon-{s}x{s}.png"))
@@ -81,12 +81,12 @@ with sync_playwright() as p:
                 f'justify-content:center">{img}</div>')
         shot(page, html, W, H, os.path.join(OUT, "banners", f"{name}-{W}x{H}.png"), transparent=False)
 
-    compose("youtube-banner", 2560, 1440, "farstudio-logo-horizontal-color-on-dark.svg", logo_w=1200)
-    compose("store-feature-graphic", 1024, 500, "farstudio-logo-horizontal-color-on-dark.svg", logo_w=700)
-    compose("social-header", 1500, 500, "farstudio-logo-horizontal-color-on-dark.svg", logo_w=900)
-    compose("link-preview", 1200, 630, "farstudio-logo-vertical-color-on-dark.svg", logo_h=420)
+    compose("youtube-banner", 2560, 1440, "farstudios-logo-horizontal-color-on-dark.svg", logo_w=1200)
+    compose("store-feature-graphic", 1024, 500, "farstudios-logo-horizontal-color-on-dark.svg", logo_w=700)
+    compose("social-header", 1500, 500, "farstudios-logo-horizontal-color-on-dark.svg", logo_w=900)
+    compose("link-preview", 1200, 630, "farstudios-logo-vertical-color-on-dark.svg", logo_h=420)
     for W, H in ((3840, 2160), (2560, 1440), (1920, 1080), (1280, 720)):
-        compose("splash-dark", W, H, "farstudio-logo-vertical-color-on-dark.svg", logo_h=round(H * 0.42))
-        compose("splash-light", W, H, "farstudio-logo-vertical-color-on-light.svg", logo_h=round(H * 0.42), bg=PAPER)
+        compose("splash-dark", W, H, "farstudios-logo-vertical-color-on-dark.svg", logo_h=round(H * 0.42))
+        compose("splash-light", W, H, "farstudios-logo-vertical-color-on-light.svg", logo_h=round(H * 0.42), bg=PAPER)
     b.close()
     print("rendered", count, "logo files")

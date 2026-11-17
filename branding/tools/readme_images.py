@@ -42,7 +42,7 @@ with sync_playwright() as p:
     pg = b.new_page()
 
     # Hero: the vertical logo on its preferred black, wide
-    shot(pg, tile("farstudio-logo-vertical-color-on-dark.svg", INK, 1600, 760, 620), 1600, 760, "hero.png")
+    shot(pg, tile("farstudios-logo-vertical-color-on-dark.svg", INK, 1600, 760, 620), 1600, 760, "hero.png")
 
     # The four color variants, each on the background it is meant for
     variants = [("color-on-dark", INK, "#9a9a9a", "color-on-dark  ·  preferred"),
@@ -50,17 +50,17 @@ with sync_playwright() as p:
                 ("mono-black", LIGHT, GRAY, "mono-black"),
                 ("mono-white", "#2f4a5c", "#c9d3da", "mono-white")]
     for v, bg, fg, label in variants:
-        shot(pg, tile(f"farstudio-logo-horizontal-{v}.svg", bg, 800, 360, 560, label, fg), 800, 360, f"variant-{v}.png")
+        shot(pg, tile(f"farstudios-logo-horizontal-{v}.svg", bg, 800, 360, 560, label, fg), 800, 360, f"variant-{v}.png")
 
     # The four pieces, on black, same height so they compare
     pieces = [("logo-vertical", 420, "Vertical · primary"), ("logo-horizontal", 640, "Horizontal · secondary"),
               ("symbol", 240, "Symbol"), ("wordmark-white", 560, "Wordmark")]
     for name, lw, label in pieces:
-        f = f"farstudio-{name}{'' if name.startswith('wordmark') else '-color-on-dark'}.svg"
+        f = f"farstudios-{name}{'' if name.startswith('wordmark') else '-color-on-dark'}.svg"
         shot(pg, tile(f, INK, 800, 460, lw, label, "#9a9a9a"), 800, 460, f"piece-{name.replace('-white', '')}.png")
 
     # Clear space and minimum sizes, on the horizontal logo
-    name = "farstudio-logo-horizontal-color-on-light.svg"
+    name = "farstudios-logo-horizontal-color-on-light.svg"
     lw = 1100
     lh = lw / ratio(name)
     svg_txt = open(os.path.join(SVG, name)).read()
@@ -96,8 +96,8 @@ with sync_playwright() as p:
     html = (f"<div style='width:1600px;height:360px;background:{PAPER};display:flex;flex-direction:column;"
             f"justify-content:center;padding-left:90px;box-sizing:border-box;{FONT};color:{INK}'>"
             f"<div style='font-size:96px;letter-spacing:.22em'><b style='font-weight:600'>FAR</b>"
-            f"<span style='font-weight:300'>STUDIO</span></div>"
-            f"<div style='font-size:26px;color:{GRAY};margin-top:26px'>Outfit · FAR 600 · STUDIO 300 · capitals · "
+            f"<span style='font-weight:300'>STUDIOS</span></div>"
+            f"<div style='font-size:26px;color:{GRAY};margin-top:26px'>Outfit · FAR 600 · STUDIOS 300 · capitals · "
             f"letter spacing 0.22 em · supporting text 400</div></div>")
     shot(pg, html, 1600, 360, "typeface.png")
     b.close()

@@ -1,6 +1,6 @@
 """Record the ignite animation as a GIF for the README, frame by frame in headless Chromium.
 
-Usage: python3 tools/ignite_gif.py svg/animated/farstudio-logo-vertical-color-on-dark-ignite.svg docs/readme/ignite.gif
+Usage: python3 tools/ignite_gif.py svg/animated/farstudios-logo-vertical-color-on-dark-ignite.svg docs/readme/ignite.gif
 """
 import io, os, sys
 from PIL import Image

@@ -71,7 +71,7 @@ with sync_playwright() as p:
         folder = os.path.join(OUT, "layers", piece)
         os.makedirs(folder, exist_ok=True)
         for variant in ("color-on-dark", "color-on-light"):
-            svg = open(os.path.join(SRC, f"farstudio-{piece}-{variant}-ignite.svg")).read()
+            svg = open(os.path.join(SRC, f"farstudios-{piece}-{variant}-ignite.svg")).read()
             layers, transform = split(svg)
             vw, vh = view_box(svg)
             w, h = (LONG_SIDE, round(LONG_SIDE * vh / vw)) if vw >= vh else (round(LONG_SIDE * vw / vh), LONG_SIDE)
@@ -102,7 +102,7 @@ def portable(keys):
 
 tracks = {name: portable(keys) for name, keys in tl.tracks().items()}
 timeline = {
-    "name": "FarStudio ignite",
+    "name": "FarStudios ignite",
     "duration_ms": tl.DURATION,
     "plays": "once; after the last key every value holds, so the logo stays lit",
     "ease": "each key's ease shapes the move to the next key: 'hold' keeps the value and jumps at the next key; 'bezier' eases with the CSS cubic-bezier in 'bezier' (x1, y1, x2, y2)",

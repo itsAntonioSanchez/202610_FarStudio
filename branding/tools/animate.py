@@ -1,4 +1,4 @@
-"""Build the animated FarStudio masters from the static colour SVGs.
+"""Build the animated FarStudios masters from the static colour SVGs.
 
 The lighthouse switching on, in pure SVG + CSS (no JavaScript): three quick flashes, each brighter
 than the last, a moment in the dark, then the light comes up and the beams open. 1.5 s counting the
@@ -73,11 +73,11 @@ def animate(svg, anim, uid):
 
 for piece in PIECES:
     for variant in VARIANTS:
-        with open(os.path.join(SRC, f"farstudio-{piece}-{variant}.svg")) as f:
+        with open(os.path.join(SRC, f"farstudios-{piece}-{variant}.svg")) as f:
             src = f.read()
         uid = variant.replace("-", "")
         for anim in CSS:
-            name = f"farstudio-{piece}-{variant}-{anim}.svg"
+            name = f"farstudios-{piece}-{variant}-{anim}.svg"
             with open(os.path.join(OUT, name), "w") as f:
                 f.write(animate(src, anim, uid))
             print(name)

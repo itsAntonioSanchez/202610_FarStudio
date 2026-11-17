@@ -25,8 +25,8 @@
     "privacy": "隐私"
   },
   "home": {
-    "title": "FarStudio · 独立游戏",
-    "description": "FarStudio 是一家为手机和 PC 制作游戏的独立工作室。",
+    "title": "FarStudios · 独立游戏",
+    "description": "FarStudios 是一家为手机和 PC 制作游戏的独立工作室。",
     "newGame": "新作",
     "seeGame": "了解游戏",
     "ourGames": "我们的游戏",
@@ -48,16 +48,16 @@
     "features": "特色",
     "playTrailer": "播放预告片",
     "trailerSoon": "预告片即将推出",
-    "signature": "FarStudio 出品",
+    "signature": "FarStudios 出品",
     "moreGames": "更多游戏",
     "support": "支持"
   },
   "about": {
     "title": "关于我们",
-    "description": "认识 FarStudio，以及如何联系我们。",
+    "description": "认识 FarStudios，以及如何联系我们。",
     "eyebrow": "关于我们",
     "statement": "我们做远远就能看见的游戏。",
-    "intro": "FarStudio 是一家小型独立工作室。像灯塔一样，我们希望自己的游戏一眼就能被发现、一上手就能明白，并且让人想要再回来。",
+    "intro": "FarStudios 是一家小型独立工作室。像灯塔一样，我们希望自己的游戏一眼就能被发现、一上手就能明白，并且让人想要再回来。",
     "valuesTitle": "我们在意的事",
     "values": [
       {
@@ -79,7 +79,7 @@
   },
   "privacy": {
     "title": "隐私政策",
-    "description": "FarStudio 及其游戏如何处理你的数据。",
+    "description": "FarStudios 及其游戏如何处理你的数据。",
     "toc": "目录",
     "byGame": "按游戏",
     "updated": "最后更新",
@@ -87,7 +87,7 @@
   },
   "support": {
     "title": "支持",
-    "byStudio": "FarStudio 出品",
+    "byStudio": "FarStudios 出品",
     "contactTitle": "联系我们",
     "contactText": "有疑问、遇到问题或有想法？请写信给我们，我们会尽快回复。",
     "faqTitle": "常见问题",
